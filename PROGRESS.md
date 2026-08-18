@@ -91,3 +91,29 @@ explicitly marks it **PASSED** and records the validator's measured criteria.
 - Next action: implement and validate the single temperature-conditioned model
   for L=4 and L=8 in M3.
 - Budget: day 2 of 7; estimated 5 days remaining.
+
+## 2026-08-18 — M3 — PASSED
+
+- Done: trained one beta-conditioned, spin-flip-symmetric trajectory-balance
+  GFlowNet for L=4 and one for L=8 over T in [1.5, 3.2]. A causal masked MLP
+  computes all raster-order conditionals in one training pass; the L=8 model
+  used two 256-unit hidden layers and 16,000 CPU steps (496.7 s total validator
+  runtime, including L=4, sampling, MCMC, tests, and plots). All 17 tests passed.
+- L=4 metrics: KL(exact || model) was 0.003255 at T=1.8, 0.001690 at
+  T=2.269185, and 0.000308 at T=3.0. Maximum learned ln Z relative error over
+  the 16-point grid was 0.1053%, versus the 3% limit.
+- L=8 metrics versus fresh Metropolis baselines: energy/|m|/chi errors were
+  0.0034%/0.0281%/4.3499% at T=1.8, 0.2359%/0.4480%/2.7736% at T=2.269185,
+  and 0.2462%/0.3822%/0.6978% at T=3.0. Each comparison used 200,000 generated
+  terminals and 256,000 Metropolis samples.
+- Mode coverage: P(m>0)=0.498825 at T=1.8, inside [0.45, 0.55]. Exact policy
+  spin-flip symmetry prevents either ordered sign from being structurally
+  preferred; the measured fraction verifies the finite sample.
+- Artifacts: `results/m3_metrics_20260818T015650-0400.json`,
+  `results/m3_conditioned_summary_20260818T015650-0400.png`, and hashed L=4/L=8
+  checkpoints `results/m3_conditioned_L*_20260818T015650-0400.pt`.
+- Status: **PASSED**.
+- Next action: execute M4's two independent critical-temperature inference
+  routes, validate differentiation on exact L=4 ln Z, and build the required
+  summary figure and trajectory diagnostics.
+- Budget: day 4 of 7; estimated 3 days remaining.

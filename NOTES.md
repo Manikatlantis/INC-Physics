@@ -199,3 +199,91 @@ Both temperatures passed. The empirical KL values were 0.01476 nats at T=3 and
 0.01538 nats at T=2, while the learned \(\log Z\) errors were 0.0055% and 0.547%,
 respectively. The harder low-temperature model still covered both symmetry
 modes because of explicit spin-flip pairing and full-support exploration.
+
+## M3 — A single model that works across temperature
+
+### Conditioning on inverse temperature
+
+M2 needed a separate policy at each temperature. M3 replaces those policies
+with one function \(P_F(a\mid s,\beta)\), where \(\beta=1/T\), and replaces the
+single learned scalar \(\log Z\) with a small function \(\log Z_\theta(\beta)\).
+The trajectory-balance residual for terminal \(x\) becomes
+
+\[
+\delta(x,\beta)=\log Z_\theta(\beta)
++\log P_F(x\mid\beta)+\beta E(x).
+\]
+
+Training samples T throughout [1.5, 3.2], so the same weights must drive this
+residual toward zero for a continuum of Boltzmann distributions. Half of the
+temperature draws are stratified onto T=1.8, the exact critical temperature,
+and T=3.0; the other half remain continuous uniform draws, so the model is not
+just a three-temperature lookup table.
+
+### Why the policy is masked
+
+With 64 sites at L=8, evaluating a conventional MLP separately for every one of
+64 trajectory steps is expensive during training. A masked autoregressive MLP
+instead outputs all 64 binary logits in one forward pass. Its fixed connection
+masks guarantee that logit \(k\) can depend only on spins \(0,\ldots,k-1\), never
+on the current or future spins. Therefore
+
+\[
+\log P_F(x\mid\beta)=\sum_{k=0}^{N-1}
+\log P_F(s_k\mid s_0,\ldots,s_{k-1},\beta)
+\]
+
+is still a valid normalized autoregressive probability. Tests explicitly change
+future spins and verify that earlier logits do not move; full enumeration at
+L=2 verifies normalization.
+
+The input includes both each prefix spin and its product with normalized beta.
+The \(\beta s_i\) feature and a causal linear skip make it easier to learn the
+temperature-scaled local Ising interaction, while the nonlinear hidden layers
+learn the effect of unassigned parts of the lattice.
+
+### Enforcing the exact zero-field symmetry
+
+At zero field, \(E(x)=E(-x)\), so the target distribution gives equal weight to
+the positive and negative ordered modes. For a raw causal logit function
+\(g_k\), the implemented policy uses
+
+\[
+\ell_k(s_{<k},\beta)=\frac12\left[
+g_k(s_{<k},\beta)-g_k(-s_{<k},\beta)\right].
+\]
+
+This makes \(\ell_k(-s_{<k},\beta)=-\ell_k(s_{<k},\beta)\). Consequently, every
+trajectory and its global spin flip have exactly equal policy probability:
+\(P_F(x\mid\beta)=P_F(-x\mid\beta)\). The first-spin logit is identically zero,
+so generation begins in either sign with probability one half. This is a known
+physical symmetry, not information from the validation samples. At T=1.8, the
+measured L=8 fraction with positive magnetization was 0.498825.
+
+### Coverage and CPU choices
+
+Trajectory balance can train off-policy, because its equality is valid for any
+complete trajectory. Batches therefore combine:
+
+- uniform configurations for full support;
+- current-policy configurations for accuracy where the model places mass;
+- noisy ordered configurations for the low-temperature sector; and
+- block-domain configurations for correlated, low-magnetization states.
+
+All are paired with global spin flips. The largest model has two 256-unit hidden
+layers, the allowed CPU ceiling. It trained for 16,000 steps with batch size 512.
+This longer run was needed because susceptibility is a variance: the mean energy
+and |m| could look accurate while a small over-weighting of rare domain walls
+still biased \(\chi\).
+
+### What passed
+
+For L=4, the exact KL divergence stayed between 0.00031 and 0.00326 nats at the
+three validation temperatures. The maximum \(\log Z(T)\) error over a 16-point
+grid was 0.105%, demonstrating interpolation by the learned normalization
+network.
+
+For L=8, 200,000 fresh generated configurations at each temperature were
+compared with 256,000 independent Metropolis samples. All mean energy and |m|
+errors were below 0.45%; all susceptibility errors were below 4.35%. This clears
+the respective 3%, 3%, and 10% requirements without relaxing any criterion.
