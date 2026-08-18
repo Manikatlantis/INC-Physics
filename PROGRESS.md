@@ -198,3 +198,22 @@ explicitly marks it **PASSED** and records the validator's measured criteria.
 - The latest unchanged rerun also passed all 9 checks and is recorded at
   `results/m5_metrics_20260818T022241-0400.json`.
 - Status: M5 remains **PASSED**; proceed to M6.
+
+## 2026-08-18 — M6 — PASSED
+
+- Done: converted the validated report into an eight-page academic paper using
+  a two-column Times template, full-width research figures, numbered sections,
+  artifact captions, provenance table, and allowlisted references. The host had
+  no LaTeX/Pandoc executable, so the repository's permitted two-column-template
+  route uses ReportLab and validates the resulting PDF with pypdf.
+- Metrics: build exit code 0; 8 pages; 5 embedded and provenance-labeled figures;
+  2,081 extractable words; required abstract/introduction/methods/results/
+  discussion/conclusion/references all present; headline claims present;
+  citation allowlist passed; no placeholders or orphan-reference markers; title,
+  author, and subject metadata present. All 9 M6 checks passed.
+- Artifacts: `results/m6_ising_gflownet_paper_20260818T023054-0400.pdf` and
+  `results/m6_metrics_20260818T023054-0400.json`; reproducible builder at
+  `paper/build_paper.py`.
+- Status: **PASSED**. All M1-M6 milestones are now passed.
+- Next action: none; deliver the report, paper, metrics, checkpoints, and figures.
+- Budget: day 7 of 7 complete.

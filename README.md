@@ -13,6 +13,7 @@ python3 scripts/m2_validate.py
 python3 scripts/m3_validate.py
 python3 scripts/m4_validate.py
 python3 scripts/m5_validate.py
+python3 scripts/m6_validate.py
 ```
 
 All stochastic code requires an explicit seed. Validators write timestamped JSON
@@ -24,3 +25,5 @@ The research narrative and headline critical-temperature estimates are in
 [`NOTES.md`](NOTES.md), and the append-only acceptance history is in
 [`PROGRESS.md`](PROGRESS.md).
 
+The final eight-page paper is
+[`results/m6_ising_gflownet_paper_20260818T023054-0400.pdf`](results/m6_ising_gflownet_paper_20260818T023054-0400.pdf).

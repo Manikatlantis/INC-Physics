@@ -419,3 +419,24 @@ simpler and reached L=12 without training. The GFlowNet's distinct advantages
 are amortized independent generation across T, explicit two-mode coverage, and
 access to a learned normalization function. That complementary comparison is
 both more accurate and more scientifically defensible.
+
+## M6 — Paper presentation structure
+
+The paper is organized to make the evidence chain easy to defend orally:
+
+- The abstract states both Tc predictions and the exact comparison.
+- Methods establish the exact oracle, independent Metropolis baseline,
+  trajectory-balance equation, temperature conditioning, and enforced symmetry.
+- Validation results come before the headline prediction, so the audience sees
+  why generated samples and learned logZ are credible.
+- Criticality is split into the learned-partition and observable routes; neither
+  estimate is hidden inside a single summary number.
+- Discussion names the negative differentiated-heat-capacity artifact,
+  finite-size limits, missing uncertainty bands, and the regimes where MCMC is
+  still preferable.
+- Every figure caption and the final provenance table identify the machine-
+  readable artifact behind the claim.
+
+If presentation time is short, use Figures 3 and 4: Figure 3 establishes model
+validation, and Figure 4 contains the two Tc routes. Figure 5 is explicitly
+exploratory and should not be promoted to a third critical-temperature method.
