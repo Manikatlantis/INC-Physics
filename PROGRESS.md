@@ -117,3 +117,37 @@ explicitly marks it **PASSED** and records the validator's measured criteria.
   routes, validate differentiation on exact L=4 ln Z, and build the required
   summary figure and trajectory diagnostics.
 - Budget: day 4 of 7; estimated 3 days remaining.
+
+## 2026-08-18 — M4 — PASSED
+
+- Done: inferred critical temperature from two independent properties of the
+  trained models. The log-partition route sampled learned ln Z(beta) on 256
+  points, fit a degree-10 Chebyshev smoother, and differentiated it twice. The
+  observable route generated 100,000 fresh terminals per T for both L=4 and L=8
+  over a 20-point grid, ran 144,000 fresh L=12 Metropolis samples per T, fit chi
+  peak drift in 1/L, and interpolated Binder crossings. Twenty tests passed.
+- Exact-pipeline validation: direct exact L=4 C peak T=2.438950 versus
+  logZ-differentiation peak T=2.439257, a 0.0126% location error (limit 2%).
+- Learned-logZ route: the L=4 learned peak was T=2.281360; the primary larger
+  L=8 learned peak was T=2.342234, inside [2.1, 2.5]. The learned curves show
+  nonphysical negative differentiated C at the low-T boundary; this is recorded
+  as a curvature/boundary limitation, not interpreted as physics.
+- Observable route: chi peaks were T=2.812028 (L=4 GFlowNet), 2.552567 (L=8
+  GFlowNet), and 2.447225 (L=12 Metropolis). The fit
+  T_peak(L)=Tc+a/L gave Tc=2.273526 with R^2=0.99825. Binder crossings were
+  T=2.242534 (L4/L8) and T=2.249908 (L8/L12), mean 2.246221. Giving the chi and
+  Binder routes equal weight gave the declared observable consensus
+  Tc=2.259873, inside [2.1, 2.5].
+- Comparison with exact Tc=2.269185: L=8 logZ prediction was +3.22%; chi
+  extrapolation +0.19%; Binder mean -1.01%; observable consensus -0.41%.
+- Trajectory signatures: mean L=8 policy entropy rose from 0.04587 nats at
+  T=1.5 to 0.56129 at T=3.2. At exact Tc it was 0.28136 nats, while
+  P(m>0 | m!=0)=0.50014. This is exploratory and no sharper critical claim is
+  made from it.
+- Artifacts: `results/m4_metrics_20260818T021212-0400.json`, required summary
+  `results/m4_tc_summary_20260818T021212-0400.png`, and
+  `results/m4_trajectory_signatures_20260818T021212-0400.png`.
+- Status: **PASSED**.
+- Next action: write M5 REPORT.md with every quantitative claim linked to its
+  result artifact and with explicit limitations/finite-size discussion.
+- Budget: day 5 of 7; estimated 2 days remaining.

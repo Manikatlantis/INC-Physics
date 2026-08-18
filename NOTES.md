@@ -287,3 +287,110 @@ For L=8, 200,000 fresh generated configurations at each temperature were
 compared with 256,000 independent Metropolis samples. All mean energy and |m|
 errors were below 0.45%; all susceptibility errors were below 4.35%. This clears
 the respective 3%, 3%, and 10% requirements without relaxing any criterion.
+
+## M4 — Predicting the critical temperature from the model
+
+### Route 1: curvature of the learned partition function
+
+The partition function contains thermodynamics before any terminal samples are
+drawn. In inverse-temperature coordinates,
+
+\[
+Z(\beta)=\sum_x e^{-\beta E(x)},\qquad
+U=-\frac{\partial\ln Z}{\partial\beta}.
+\]
+
+Differentiating again gives the energy variance,
+
+\[
+\frac{\partial^2\ln Z}{\partial\beta^2}
+=\langle E^2\rangle-\langle E\rangle^2,
+\]
+
+so heat capacity per site is
+
+\[
+c(\beta)=\frac{\beta^2}{N}
+\frac{\partial^2\ln Z}{\partial\beta^2}.
+\]
+
+M4 evaluates \(\ln Z\) on 256 evenly spaced beta values, fits a degree-10
+Chebyshev polynomial, differentiates that smooth fit analytically, and searches
+for the maximum over T in [1.8, 2.8]. The exact L=4 oracle is the non-negotiable
+calibration: direct exact observables put its finite-size peak at T=2.438950,
+while the logZ pipeline returns T=2.439257, only 0.0126% away.
+
+Applying exactly the same procedure to the learned normalization networks gives
+T=2.281360 for L=4 and T=2.342234 for L=8. The larger-lattice value is the
+declared primary logZ prediction and is 3.22% above Onsager's thermodynamic-limit
+Tc=2.269185. Both are finite-size model predictions, so agreement to all digits
+is neither expected nor claimed.
+
+Differentiation is less forgiving than value prediction: tiny smooth errors in
+\(\ln Z\) are magnified by a second derivative. In particular, the learned
+curves yield negative estimated heat capacity near the T=1.5 boundary. Negative
+equilibrium heat capacity is not physical for this canonical model; it is a
+boundary-curvature/model-fit artifact. The peak validation passes, but the
+artifact is an important limitation of using learned \(\ln Z\) derivatives.
+
+### Route 2: finite-size observables from generated states
+
+For a finite lattice, susceptibility has a rounded maximum at a pseudo-critical
+temperature \(T_\chi(L)\). The maximum shifts with lattice size. With only three
+small sizes, M4 uses the simplest stated extrapolation,
+
+\[
+T_\chi(L)=T_c+\frac{a}{L}.
+\]
+
+Local quadratic fits give peaks at 2.812028 for generated L=4 states, 2.552567
+for generated L=8 states, and 2.447225 for L=12 Metropolis states. Linear
+regression against \(1/L\) has \(R^2=0.99825\) and intercept
+
+\[
+T_c^{(\chi)}=2.273526,
+\]
+
+which is 0.19% above the exact Tc. The very high \(R^2\) describes these three
+points only; it is not a substitute for larger lattices or uncertainty analysis.
+
+The Binder cumulant is nearly size-independent at criticality. Linear
+interpolation of the generated/sample curves gives
+
+\[
+T_\times^{(4,8)}=2.242534,\qquad
+T_\times^{(8,12)}=2.249908.
+\]
+
+Their mean, 2.246221, is 1.01% below exact Tc. Giving the susceptibility family
+and the mean Binder family equal weight produces the declared observable-route
+consensus
+
+\[
+T_c^{(\mathrm{obs})}=2.259873,
+\]
+
+0.41% below exact. The weighting is a transparent summary convention, not a
+new estimator optimized after seeing the exact answer; the component estimates
+remain the scientifically useful outputs.
+
+### What trajectories reveal
+
+For a binary action with probability \(p_t\), per-step policy entropy is
+
+\[
+H_t=-p_t\ln p_t-(1-p_t)\ln(1-p_t).
+\]
+
+The first spin always has \(H_0=\ln2\) because of enforced spin-flip symmetry.
+At low T, later actions become predictable after an ordered sign is selected,
+so mean L=8 entropy is only 0.04587 nats at T=1.5. It rises smoothly through
+0.28136 nats at exact Tc to 0.56129 at T=3.2 as disorder makes both actions more
+plausible. This monotonic change is a useful learned signature, but no separate
+Tc is extracted from it.
+
+Raw \(P(m>0)\) drifts slightly below one half at high T because a growing
+fraction of finite-lattice samples has exactly zero magnetization. Conditioning
+on nonzero magnetization removes that bookkeeping effect; at exact Tc the
+positive fraction is 0.50014. Thus the trajectories show no spontaneous
+preference for either ordered sign, consistent with the zero-field symmetry.
