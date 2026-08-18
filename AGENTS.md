@@ -6,17 +6,14 @@ configurations of the 2D Ising model from the Boltzmann distribution
 p(x) ∝ exp(-E(x)/T), and use the trained model to PREDICT the critical
 temperature Tc two independent ways: (1) from the learned partition function
 logZ(T) itself, (2) from observables computed on generated samples. This is a
-physics research project for a university independent study with a hard 7-day
-deadline. Correctness against known physics is the top priority. Fabricated or
+physics research project for a university independent study.
+Correctness against known physics is the top priority. Fabricated or
 unvalidated results are failure.
 
 ## Hard constraints
 - Compute: single Mac CPU only. No CUDA. Keep networks small (MLPs, <= 3 hidden
   layers, <= 256 units). GFlowNet lattice sizes: L=4 and L=8 only. MCMC may go
   to L=12. If a training run would exceed ~2 hours, shrink it and note why.
-- Time budget: 7 calendar days. Day targets are listed per milestone. If behind
-  schedule by more than one day, execute the FALLBACK plan (see bottom) instead
-  of pushing forward.
 
 ## Ground truth anchors (never violate)
 - 2D square-lattice Ising, nearest-neighbor J=1, periodic boundaries, zero field.
@@ -33,7 +30,7 @@ unvalidated results are failure.
 3. Run its validation script (scripts/mN_validate.py). Every milestone has
    numeric acceptance criteria; the script must print PASS or FAIL with numbers.
 4. Append a dated entry to PROGRESS.md: what was done, metrics, PASS/FAIL, next
-   action, and estimated days remaining vs budget. Never edit past entries.
+   action. Never edit past entries.
 5. After each milestone PASSES, append a section to NOTES.md explaining, in
    plain language a physics undergrad can present from, the math just
    implemented: the equations, why they work, and what the key hyperparameters
@@ -59,7 +56,7 @@ unvalidated results are failure.
 
 ## Milestones
 
-### M1 (Day 1) — Exact physics core + MCMC baseline
+### M1 — Exact physics core + MCMC baseline
 Ising energy; full enumeration for L=4 including exact ln Z(T); Metropolis for
 L in {4, 8, 12}. Observables per T: energy/site, |m|, susceptibility chi,
 specific heat C, Binder cumulant U4. T grid: 1.5 to 3.2, >= 14 points, denser
@@ -67,7 +64,7 @@ in [2.0, 2.5].
 ACCEPT: (a) L=4 MCMC matches exact within 1% (energy, |m|) and 5% (chi, C) at
 every T. (b) chi(T) for L=12 peaks in [2.15, 2.45]. (c) Unit tests pass.
 
-### M2 (Days 2-3) — Fixed-temperature GFlowNet vs the exact oracle
+### M2 — Fixed-temperature GFlowNet vs the exact oracle
 States: lattice sites in {-1, +1, unassigned}; start all unassigned; action =
 assign next site in raster order; terminal = fully assigned. Reward
 R(x) = exp(-E(x)/T). Train with Trajectory Balance at T=3.0 and T=2.0, L=4.
@@ -76,7 +73,7 @@ ACCEPT: (a) KL(exact || GFlowNet empirical) < 0.05 nats at both T, from
 >= 200k samples over all 65,536 states. (b) Mean energy and |m| within 2% of
 exact. (c) Learned logZ within 2% of exact ln Z. Log all numbers.
 
-### M3 (Days 3-4) — Temperature-conditioned GFlowNet
+### M3 — Temperature-conditioned GFlowNet
 One model conditioned on beta=1/T (input feature), trained with T sampled from
 [1.5, 3.2]. L=4 first, then L=8.
 ACCEPT: (a) L=4: KL < 0.08 at T in {1.8, 2.269, 3.0} from the single model.
@@ -85,7 +82,7 @@ observables match Metropolis within 3% (energy, |m|) and 10% (chi). (d) Mode
 coverage at T=1.8: fraction of samples with m>0 is 0.5 ± 0.05 (both ordered
 modes covered). Report all.
 
-### M4 (Day 5) — Predicting Tc FROM THE MODEL ITSELF (primary result)
+### M4 — Predicting Tc FROM THE MODEL ITSELF (primary result)
 This is the headline: the GFlowNet's own learned structure predicts criticality.
 (a) logZ route: take the conditioned model's learned logZ(beta) on a dense beta
 grid; compute energy U = -d(lnZ)/d(beta) and specific heat
@@ -103,7 +100,7 @@ observable-route Tc both land in [2.1, 2.5] (finite-size shift is expected and
 must be discussed, not hidden). (c) One summary figure: C(T) from learned logZ,
 chi(T), U4(T), all with the exact Tc line.
 
-### M5 (Day 6) — Report
+### M5 — Report
 REPORT.md: problem statement; Ising + Boltzmann background; GFlowNet
 formulation (state/action space, trajectory balance, learned logZ); validation
 methodology (exact oracle, MCMC baseline); results with all figures; the two
@@ -111,13 +108,13 @@ Tc predictions and how they compare; honest limitations (CPU-bound sizes,
 finite-size effects, mode coverage near Tc, where MCMC still wins); follow-ups.
 Every number traceable to a file in results/.
 
-### M6 (Day 7) — Paper-style PDF
+### M6 — Paper-style PDF
 Convert REPORT.md into an academic-paper-styled PDF (LaTeX via pandoc or a
 two-column template): abstract, intro, methods, results, discussion,
 references. References limited to ones verified to exist (see citation rule).
 ACCEPT: PDF builds cleanly, all figures included, no orphaned claims.
 
-## FALLBACK (if > 1 day behind at any checkpoint)
+## FALLBACK (descope path if a milestone proves infeasible)
 Guaranteed-deliverable path: M1 + M2 + M4 using fixed-temperature GFlowNets at
 6-8 temperatures for L=4 only (skip conditioning), logZ(T) from the per-T
 learned values, observable route via MCMC at L in {8, 12}. Then M5 + M6.
