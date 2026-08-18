@@ -8,7 +8,6 @@ explicitly marks it **PASSED** and records the validator's measured criteria.
 - Status: no milestones passed; M1 is in progress.
 - Context: the workspace initially contained only `AGENTS.md`; the Git repository
   and required project structure are being initialized from that specification.
-- Budget: day 1 of 7; estimated 7 days remaining including today.
 
 ## 2026-08-18 — M1 validation attempt 2 — FAIL (figure backend)
 
@@ -29,7 +28,6 @@ explicitly marks it **PASSED** and records the validator's measured criteria.
 - Status: **FAIL** (artifact-generation failure; full criteria not evaluated).
 - Next action: force `Agg`, smoke-test figure output, and rerun the unchanged
   numeric acceptance criteria.
-- Budget: day 1 of 7; estimated 7 days remaining including today.
 
 ## 2026-08-18 — M1 validation attempt 1 — FAIL (launcher)
 
@@ -45,7 +43,6 @@ explicitly marks it **PASSED** and records the validator's measured criteria.
   resolved repository root to the validator's import path.
 - Status: **FAIL** (infrastructure failure, acceptance criteria not evaluated).
 - Next action: apply the import-path bootstrap and rerun the unchanged validator.
-- Budget: day 1 of 7; estimated 7 days remaining including today.
 
 ## 2026-08-18 — M1 — PASSED
 
@@ -64,7 +61,6 @@ explicitly marks it **PASSED** and records the validator's measured criteria.
 - Status: **PASSED**.
 - Next action: implement M2 fixed-temperature trajectory-balance GFlowNets at
   T=3.0 and T=2.0 for L=4, then validate against the exact oracle.
-- Budget: day 1 of 7 complete; estimated 6 days remaining.
 
 ## 2026-08-18 — M2 — PASSED
 
@@ -90,7 +86,6 @@ explicitly marks it **PASSED** and records the validator's measured criteria.
 - Status: **PASSED**.
 - Next action: implement and validate the single temperature-conditioned model
   for L=4 and L=8 in M3.
-- Budget: day 2 of 7; estimated 5 days remaining.
 
 ## 2026-08-18 — M3 — PASSED
 
@@ -116,7 +111,6 @@ explicitly marks it **PASSED** and records the validator's measured criteria.
 - Next action: execute M4's two independent critical-temperature inference
   routes, validate differentiation on exact L=4 ln Z, and build the required
   summary figure and trajectory diagnostics.
-- Budget: day 4 of 7; estimated 3 days remaining.
 
 ## 2026-08-18 — M4 — PASSED
 
@@ -150,7 +144,6 @@ explicitly marks it **PASSED** and records the validator's measured criteria.
 - Status: **PASSED**.
 - Next action: write M5 REPORT.md with every quantitative claim linked to its
   result artifact and with explicit limitations/finite-size discussion.
-- Budget: day 5 of 7; estimated 2 days remaining.
 
 ## 2026-08-18 — M5 — PASSED
 
@@ -167,7 +160,6 @@ explicitly marks it **PASSED** and records the validator's measured criteria.
 - Status: **PASSED**.
 - Next action: convert the report to an academic paper-style PDF, validate every
   included figure and quantitative claim, and record a clean M6 build.
-- Budget: day 6 of 7; estimated 1 day remaining.
 
 ## 2026-08-18 — M5 validation attempt 1 — FAIL (traceability parser)
 
@@ -187,7 +179,6 @@ explicitly marks it **PASSED** and records the validator's measured criteria.
 - Status: **FAIL** (validator parsing defect; report content was present).
 - Next action: make only that phrase check whitespace-tolerant and rerun every
   unchanged M5 criterion.
-- Budget: day 5 of 7; estimated 2 days remaining.
 
 ## 2026-08-18 — M5 log-order correction — PASSED reaffirmed
 
@@ -216,7 +207,6 @@ explicitly marks it **PASSED** and records the validator's measured criteria.
   `paper/build_paper.py`.
 - Status: **PASSED**. All M1-M6 milestones are now passed.
 - Next action: none; deliver the report, paper, metrics, checkpoints, and figures.
-- Budget: day 7 of 7 complete.
 
 ## 2026-08-18 — Final calibration and wording revision — PASSED
 
@@ -251,3 +241,11 @@ explicitly marks it **PASSED** and records the validator's measured criteria.
   remains `paper/build_paper.py`.
 - Status: **PASSED**. Next action: commit and deliver this verified revision.
 - Timing: final task complete; no fictional calendar-day budget is asserted.
+
+## 2026-08-18 — Log cleanup
+
+- Removed the per-entry "Budget: day N of 7" lines. They tracked the
+  planned 7-day calendar from AGENTS.md, but the actual work completed
+  in one automated session of roughly 90 minutes (as stated in the
+  paper), so the lines described a schedule that was never used. No
+  other text in any prior entry was changed.
