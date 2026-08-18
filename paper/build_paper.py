@@ -49,7 +49,7 @@ FIGURES = {
 def page_chrome(canvas, document) -> None:
     canvas.saveState()
     canvas.setTitle("Learning Criticality with a Temperature-Conditioned GFlowNet")
-    canvas.setAuthor("Independent Study in Computational Statistical Physics")
+    canvas.setAuthor("Manik Sharma")
     canvas.setSubject("GFlowNet sampling and critical-temperature inference for the 2D Ising model")
     if document.page > 1:
         canvas.setStrokeColor(colors.HexColor("#777777"))
@@ -58,7 +58,7 @@ def page_chrome(canvas, document) -> None:
         canvas.setFont("Times-Italic", 7.3)
         canvas.setFillColor(colors.HexColor("#555555"))
         canvas.drawString(MARGIN, PAGE_HEIGHT - 0.27 * inch, "Learning Criticality with a Temperature-Conditioned GFlowNet")
-        canvas.drawRightString(PAGE_WIDTH - MARGIN, PAGE_HEIGHT - 0.27 * inch, "INC Physics")
+        canvas.drawRightString(PAGE_WIDTH - MARGIN, PAGE_HEIGHT - 0.27 * inch, "GFlowNet Ising Study")
     canvas.setFont("Times-Roman", 7.3)
     canvas.setFillColor(colors.HexColor("#555555"))
     canvas.drawCentredString(PAGE_WIDTH / 2, 0.24 * inch, str(document.page))
@@ -514,7 +514,7 @@ def add_body(story: list, styles: dict[str, ParagraphStyle]) -> None:
                 ["M4", "Criticality", "results/m4_metrics_20260818T021212-0400.json"],
                 ["M5", "Report audit", "results/m5_metrics_20260818T030253-0400.json"],
             ],
-            [0.28 * inch, 0.72 * inch, 1.37 * inch],
+            [0.25 * inch, 0.62 * inch, 1.80 * inch],
             font_size=5.5,
         )
     )
@@ -613,7 +613,7 @@ def build(output_path: Path) -> None:
         topMargin=MARGIN,
         bottomMargin=MARGIN,
         title="Learning Criticality with a Temperature-Conditioned GFlowNet",
-        author="Independent Study in Computational Statistical Physics",
+        author="Manik Sharma",
         subject="2D Ising GFlowNet sampling and critical-temperature inference",
     )
     document.addPageTemplates(
@@ -627,7 +627,7 @@ def build(output_path: Path) -> None:
     story: list = [
         Paragraph("Learning Criticality with a Temperature-Conditioned GFlowNet", styles["title"]),
         Paragraph(
-            "Independent Study in Computational Statistical Physics &nbsp; | &nbsp; CPU-validated research artifact &nbsp; | &nbsp; August 2026",
+            "Manik Sharma  |  University of Massachusetts Boston  |  August 2026",
             styles["author"],
         ),
         HRFlowable(width="100%", thickness=0.55, color=colors.HexColor("#66758c"), spaceBefore=1, spaceAfter=3),
