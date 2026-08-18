@@ -1,0 +1,1796 @@
+{
+  "artifacts": {
+    "figure": "results/m1_observables_20260818T002648-0400.png"
+  },
+  "criteria": {
+    "a_l4_mcmc_vs_exact": {
+      "by_temperature": [
+        {
+          "passed": true,
+          "relative_errors": {
+            "abs_magnetization": 0.00018373481772530212,
+            "energy_per_site": 0.00030706548227086547,
+            "specific_heat": 0.010386694986470527,
+            "susceptibility": 0.013787506583998018
+          },
+          "temperature": 1.5,
+          "within_tolerance": {
+            "abs_magnetization": true,
+            "energy_per_site": true,
+            "specific_heat": true,
+            "susceptibility": true
+          }
+        },
+        {
+          "passed": true,
+          "relative_errors": {
+            "abs_magnetization": 0.00031499110533905067,
+            "energy_per_site": 0.00030224791964783863,
+            "specific_heat": 0.012069726235956962,
+            "susceptibility": 0.02749233059395618
+          },
+          "temperature": 1.7,
+          "within_tolerance": {
+            "abs_magnetization": true,
+            "energy_per_site": true,
+            "specific_heat": true,
+            "susceptibility": true
+          }
+        },
+        {
+          "passed": true,
+          "relative_errors": {
+            "abs_magnetization": 0.00013365979181281375,
+            "energy_per_site": 0.0002731285503457528,
+            "specific_heat": 0.0033665076493425666,
+            "susceptibility": 0.0018086571873651696
+          },
+          "temperature": 1.9,
+          "within_tolerance": {
+            "abs_magnetization": true,
+            "energy_per_site": true,
+            "specific_heat": true,
+            "susceptibility": true
+          }
+        },
+        {
+          "passed": true,
+          "relative_errors": {
+            "abs_magnetization": 0.000644959798386516,
+            "energy_per_site": 0.0008534488672857292,
+            "specific_heat": 0.006689875830621771,
+            "susceptibility": 0.013131454387740719
+          },
+          "temperature": 2.0,
+          "within_tolerance": {
+            "abs_magnetization": true,
+            "energy_per_site": true,
+            "specific_heat": true,
+            "susceptibility": true
+          }
+        },
+        {
+          "passed": true,
+          "relative_errors": {
+            "abs_magnetization": 7.833403506890339e-05,
+            "energy_per_site": 0.00010024797547238556,
+            "specific_heat": 0.00032853659524218447,
+            "susceptibility": 0.00026498546723473384
+          },
+          "temperature": 2.1,
+          "within_tolerance": {
+            "abs_magnetization": true,
+            "energy_per_site": true,
+            "specific_heat": true,
+            "susceptibility": true
+          }
+        },
+        {
+          "passed": true,
+          "relative_errors": {
+            "abs_magnetization": 3.8157883855018214e-05,
+            "energy_per_site": 8.691959282512242e-05,
+            "specific_heat": 0.0012365579256680024,
+            "susceptibility": 0.001438945020345586
+          },
+          "temperature": 2.15,
+          "within_tolerance": {
+            "abs_magnetization": true,
+            "energy_per_site": true,
+            "specific_heat": true,
+            "susceptibility": true
+          }
+        },
+        {
+          "passed": true,
+          "relative_errors": {
+            "abs_magnetization": 0.00010816417032876532,
+            "energy_per_site": 0.0002505536044520381,
+            "specific_heat": 0.0012592808083340928,
+            "susceptibility": 0.00030771120948739234
+          },
+          "temperature": 2.2,
+          "within_tolerance": {
+            "abs_magnetization": true,
+            "energy_per_site": true,
+            "specific_heat": true,
+            "susceptibility": true
+          }
+        },
+        {
+          "passed": true,
+          "relative_errors": {
+            "abs_magnetization": 0.0006210467588914895,
+            "energy_per_site": 0.0006606545615055109,
+            "specific_heat": 0.001861602726380636,
+            "susceptibility": 0.005105076198842946
+          },
+          "temperature": 2.25,
+          "within_tolerance": {
+            "abs_magnetization": true,
+            "energy_per_site": true,
+            "specific_heat": true,
+            "susceptibility": true
+          }
+        },
+        {
+          "passed": true,
+          "relative_errors": {
+            "abs_magnetization": 0.00022439714439006806,
+            "energy_per_site": 0.00019205860994409057,
+            "specific_heat": 0.0013271974228431323,
+            "susceptibility": 0.0014146811493873088
+          },
+          "temperature": 2.269185314213022,
+          "within_tolerance": {
+            "abs_magnetization": true,
+            "energy_per_site": true,
+            "specific_heat": true,
+            "susceptibility": true
+          }
+        },
+        {
+          "passed": true,
+          "relative_errors": {
+            "abs_magnetization": 0.00034834663383638423,
+            "energy_per_site": 0.0004994615249306686,
+            "specific_heat": 0.0025720130058627722,
+            "susceptibility": 0.0004033763953871724
+          },
+          "temperature": 2.3,
+          "within_tolerance": {
+            "abs_magnetization": true,
+            "energy_per_site": true,
+            "specific_heat": true,
+            "susceptibility": true
+          }
+        },
+        {
+          "passed": true,
+          "relative_errors": {
+            "abs_magnetization": 0.00012765154258771128,
+            "energy_per_site": 0.0002260028514498447,
+            "specific_heat": 0.0005755324885333057,
+            "susceptibility": 0.00014660636922332707
+          },
+          "temperature": 2.35,
+          "within_tolerance": {
+            "abs_magnetization": true,
+            "energy_per_site": true,
+            "specific_heat": true,
+            "susceptibility": true
+          }
+        },
+        {
+          "passed": true,
+          "relative_errors": {
+            "abs_magnetization": 0.00013872102777769273,
+            "energy_per_site": 0.00017401149259621906,
+            "specific_heat": 0.001544083318205267,
+            "susceptibility": 0.0007973435993620722
+          },
+          "temperature": 2.4,
+          "within_tolerance": {
+            "abs_magnetization": true,
+            "energy_per_site": true,
+            "specific_heat": true,
+            "susceptibility": true
+          }
+        },
+        {
+          "passed": true,
+          "relative_errors": {
+            "abs_magnetization": 9.935062976501035e-05,
+            "energy_per_site": 0.00046702113836995533,
+            "specific_heat": 0.0021248597019992,
+            "susceptibility": 0.0004363551316796999
+          },
+          "temperature": 2.45,
+          "within_tolerance": {
+            "abs_magnetization": true,
+            "energy_per_site": true,
+            "specific_heat": true,
+            "susceptibility": true
+          }
+        },
+        {
+          "passed": true,
+          "relative_errors": {
+            "abs_magnetization": 0.00048675025296863545,
+            "energy_per_site": 0.00027329013239072336,
+            "specific_heat": 0.00026177525929140996,
+            "susceptibility": 0.0035580982103747133
+          },
+          "temperature": 2.5,
+          "within_tolerance": {
+            "abs_magnetization": true,
+            "energy_per_site": true,
+            "specific_heat": true,
+            "susceptibility": true
+          }
+        },
+        {
+          "passed": true,
+          "relative_errors": {
+            "abs_magnetization": 0.0010186222998025394,
+            "energy_per_site": 0.001002292821120939,
+            "specific_heat": 0.0014815417452284376,
+            "susceptibility": 0.0035512906999917502
+          },
+          "temperature": 2.6,
+          "within_tolerance": {
+            "abs_magnetization": true,
+            "energy_per_site": true,
+            "specific_heat": true,
+            "susceptibility": true
+          }
+        },
+        {
+          "passed": true,
+          "relative_errors": {
+            "abs_magnetization": 3.726054642329993e-05,
+            "energy_per_site": 0.00045147177140830974,
+            "specific_heat": 0.0012653542151776387,
+            "susceptibility": 0.0001197548682904983
+          },
+          "temperature": 2.8,
+          "within_tolerance": {
+            "abs_magnetization": true,
+            "energy_per_site": true,
+            "specific_heat": true,
+            "susceptibility": true
+          }
+        },
+        {
+          "passed": true,
+          "relative_errors": {
+            "abs_magnetization": 0.00033405015537155884,
+            "energy_per_site": 0.0008200214185283954,
+            "specific_heat": 0.00196937266432491,
+            "susceptibility": 0.0016169532443071704
+          },
+          "temperature": 3.0,
+          "within_tolerance": {
+            "abs_magnetization": true,
+            "energy_per_site": true,
+            "specific_heat": true,
+            "susceptibility": true
+          }
+        },
+        {
+          "passed": true,
+          "relative_errors": {
+            "abs_magnetization": 0.0006404776240500976,
+            "energy_per_site": 5.8648231797086786e-05,
+            "specific_heat": 0.0020347348236650123,
+            "susceptibility": 0.003963900366205404
+          },
+          "temperature": 3.2,
+          "within_tolerance": {
+            "abs_magnetization": true,
+            "energy_per_site": true,
+            "specific_heat": true,
+            "susceptibility": true
+          }
+        }
+      ],
+      "maximum_relative_errors": {
+        "abs_magnetization": 0.0010186222998025394,
+        "energy_per_site": 0.001002292821120939,
+        "specific_heat": 0.012069726235956962,
+        "susceptibility": 0.02749233059395618
+      },
+      "passed": true,
+      "tolerances": {
+        "abs_magnetization": 0.01,
+        "energy_per_site": 0.01,
+        "specific_heat": 0.05,
+        "susceptibility": 0.05
+      }
+    },
+    "b_l12_susceptibility_peak": {
+      "accepted_interval": [
+        2.15,
+        2.45
+      ],
+      "passed": true,
+      "peak_temperature": 2.45
+    },
+    "c_unit_tests": {
+      "passed": true
+    }
+  },
+  "duration_seconds": 33.7812,
+  "exact_critical_temperature": 2.269185314213022,
+  "exact_l4": [
+    {
+      "log_partition": 22.117013911715983,
+      "observables": {
+        "abs_magnetization": 0.9861732978163802,
+        "binder_cumulant": 0.6639587030449989,
+        "energy_per_site": -1.9506425614594607,
+        "mean_abs_magnetization": 15.778772765062083,
+        "mean_energy": -31.21028098335137,
+        "mean_energy_squared": 981.2942344868353,
+        "mean_magnetization": -9.769962616701378e-15,
+        "mean_magnetization_fourth": 62845.25696433523,
+        "mean_magnetization_squared": 249.67743824435462,
+        "specific_heat": 0.20034987297475165,
+        "susceptibility": 0.02949034470373727,
+        "temperature": 1.5
+      },
+      "temperature": 1.5
+    },
+    {
+      "log_partition": 19.698377470111573,
+      "observables": {
+        "abs_magnetization": 0.9692881073468415,
+        "binder_cumulant": 0.6598262001966202,
+        "energy_per_site": -1.8971121486747244,
+        "mean_abs_magnetization": 15.508609717549463,
+        "mean_energy": -30.35379437879559,
+        "mean_energy_squared": 937.1698269951612,
+        "mean_magnetization": -2.220446049250313e-14,
+        "mean_magnetization_fourth": 59983.07815382693,
+        "mean_magnetization_squared": 242.43946468189182,
+        "specific_heat": 0.34206301481311485,
+        "susceptibility": 0.07067975406699202,
+        "temperature": 1.7
+      },
+      "temperature": 1.7
+    },
+    {
+      "log_partition": 17.856811127616165,
+      "observables": {
+        "abs_magnetization": 0.9396608634579489,
+        "binder_cumulant": 0.6513792077145333,
+        "energy_per_site": -1.8115390711262753,
+        "mean_abs_magnetization": 15.034573815327182,
+        "mean_energy": -28.984625138020405,
+        "mean_energy_squared": 869.9626931533246,
+        "mean_magnetization": 6.217248937900877e-15,
+        "mean_magnetization_fourth": 55548.926235298895,
+        "mean_magnetization_squared": 230.46265674760235,
+        "specific_heat": 0.5168663220526357,
+        "susceptibility": 0.1455344387855471,
+        "temperature": 1.9
+      },
+      "temperature": 1.9
+    },
+    {
+      "log_partition": 17.105367118731582,
+      "observables": {
+        "abs_magnetization": 0.9189432674019722,
+        "binder_cumulant": 0.6448107911878427,
+        "energy_per_site": -1.7553802887774461,
+        "mean_abs_magnetization": 14.703092278431555,
+        "mean_energy": -28.086084620439138,
+        "mean_energy_squared": 827.5822393678989,
+        "mean_magnetization": 3.552713678800501e-15,
+        "mean_magnetization_fourth": 52725.683236964614,
+        "mean_magnetization_squared": 222.44395050043352,
+        "specific_heat": 0.60553265720986,
+        "susceptibility": 0.1957196235112466,
+        "temperature": 2.0
+      },
+      "temperature": 2.0
+    },
+    {
+      "log_partition": 16.448512906539708,
+      "observables": {
+        "abs_magnetization": 0.8941315643708196,
+        "binder_cumulant": 0.6363307721235787,
+        "energy_per_site": -1.6907131103580846,
+        "mean_abs_magnetization": 14.306105029933114,
+        "mean_energy": -27.051409765729353,
+        "mean_energy_squared": 780.167817232365,
+        "mean_magnetization": 4.440892098500626e-15,
+        "mean_magnetization_fourth": 49551.80743866551,
+        "mean_magnetization_squared": 213.1158966152659,
+        "specific_heat": 0.6857858123436444,
+        "susceptibility": 0.2515254609460821,
+        "temperature": 2.1
+      },
+      "temperature": 2.1
+    },
+    {
+      "log_partition": 16.152006445228636,
+      "observables": {
+        "abs_magnetization": 0.8802720747429111,
+        "binder_cumulant": 0.6313160806106974,
+        "energy_per_site": -1.65553842997624,
+        "mean_abs_magnetization": 14.084353195886578,
+        "mean_energy": -26.48861487961984,
+        "mean_energy_squared": 754.9335761067332,
+        "mean_magnetization": 2.398081733190338e-14,
+        "mean_magnetization_fourth": 47857.99314188662,
+        "mean_magnetization_squared": 208.01253962780913,
+        "specific_heat": 0.7204821236602994,
+        "susceptibility": 0.2803353105037405,
+        "temperature": 2.15
+      },
+      "temperature": 2.15
+    },
+    {
+      "log_partition": 15.875066611095884,
+      "observables": {
+        "abs_magnetization": 0.865532421679617,
+        "binder_cumulant": 0.6257667312941578,
+        "energy_per_site": -1.618742821431924,
+        "mean_abs_magnetization": 13.848518746873872,
+        "mean_energy": -25.899885142910783,
+        "mean_energy_squared": 728.9234140350885,
+        "mean_magnetization": 1.509903313490213e-14,
+        "mean_magnetization_fourth": 46109.625481723095,
+        "mean_magnetization_squared": 202.6581032185897,
+        "specific_heat": 0.7505083111972862,
+        "susceptibility": 0.30899521977479044,
+        "temperature": 2.2
+      },
+      "temperature": 2.2
+    },
+    {
+      "log_partition": 15.616496052190433,
+      "observables": {
+        "abs_magnetization": 0.8500049847633377,
+        "binder_cumulant": 0.6196782185876089,
+        "energy_per_site": -1.5805755772017842,
+        "mean_abs_magnetization": 13.600079756213404,
+        "mean_energy": -25.289209235228547,
+        "mean_energy_squared": 702.3403370420066,
+        "mean_magnetization": 1.3322676295501878e-14,
+        "mean_magnetization_fourth": 44320.779482573766,
+        "mean_magnetization_squared": 197.09130643422418,
+        "specific_heat": 0.7752621394918234,
+        "susceptibility": 0.33692047385718144,
+        "temperature": 2.25
+      },
+      "temperature": 2.25
+    },
+    {
+      "log_partition": 15.521915458755283,
+      "observables": {
+        "abs_magnetization": 0.8438604448134202,
+        "binder_cumulant": 0.6171993184124598,
+        "energy_per_site": -1.5656237876383174,
+        "mean_abs_magnetization": 13.501767117014722,
+        "mean_energy": -25.04998060221308,
+        "mean_energy_squared": 692.0327137546494,
+        "mean_magnetization": 0.0,
+        "mean_magnetization_fourth": 43626.73935269035,
+        "mean_magnetization_squared": 194.90788059358044,
+        "specific_heat": 0.7832668259289525,
+        "susceptibility": 0.3473208322965275,
+        "temperature": 2.269185314213022
+      },
+      "temperature": 2.269185314213022
+    },
+    {
+      "log_partition": 15.375156250889974,
+      "observables": {
+        "abs_magnetization": 0.8337989145868594,
+        "binder_cumulant": 0.6130537936345435,
+        "energy_per_site": -1.5413114924550815,
+        "mean_abs_magnetization": 13.34078263338975,
+        "mean_energy": -24.660983879281304,
+        "mean_energy_squared": 675.3961958747957,
+        "mean_magnetization": -7.993605777301127e-15,
+        "mean_magnetization_fourth": 42506.18387486936,
+        "mean_magnetization_squared": 191.35514088850738,
+        "specific_heat": 0.7943297492984802,
+        "susceptibility": 0.36355053307483237,
+        "temperature": 2.3
+      },
+      "temperature": 2.3
+    },
+    {
+      "log_partition": 15.149961096945702,
+      "observables": {
+        "abs_magnetization": 0.8170359365226467,
+        "binder_cumulant": 0.6059044975023505,
+        "energy_per_site": -1.5012409774499504,
+        "mean_abs_magnetization": 13.072574984362348,
+        "mean_energy": -24.019855639199207,
+        "mean_energy_squared": 648.3043170537535,
+        "mean_magnetization": 3.552713678800501e-15,
+        "mean_magnetization_fourth": 40680.6984799598,
+        "mean_magnetization_squared": 185.49526742573045,
+        "specific_heat": 0.8075017216589349,
+        "susceptibility": 0.3883790080838886,
+        "temperature": 2.35
+      },
+      "temperature": 2.35
+    },
+    {
+      "log_partition": 14.93987271861118,
+      "observables": {
+        "abs_magnetization": 0.7998456559322877,
+        "binder_cumulant": 0.5982489129997521,
+        "energy_per_site": -1.4606597705451811,
+        "mean_abs_magnetization": 12.797530494916604,
+        "mean_energy": -23.3705563287229,
+        "mean_energy_squared": 621.2723870855579,
+        "mean_magnetization": -1.9539925233402755e-14,
+        "mean_magnetization_fourth": 38858.809097922756,
+        "mean_magnetization_squared": 179.5583416551745,
+        "specific_heat": 0.8147730465662751,
+        "susceptibility": 0.4109779918451584,
+        "temperature": 2.4
+      },
+      "temperature": 2.4
+    },
+    {
+      "log_partition": 14.743899101710133,
+      "observables": {
+        "abs_magnetization": 0.7823607485294302,
+        "binder_cumulant": 0.5901126582158105,
+        "energy_per_site": -1.419859031235574,
+        "mean_abs_magnetization": 12.517771976470883,
+        "mean_energy": -22.717744499769186,
+        "mean_energy_squared": 594.4960880660705,
+        "mean_magnetization": 1.0658141036401503e-14,
+        "mean_magnetization_fourth": 37054.17537564865,
+        "mean_magnetization_squared": 173.5903967249774,
+        "specific_heat": 0.8163283310003885,
+        "susceptibility": 0.4310148334198385,
+        "temperature": 2.45
+      },
+      "temperature": 2.45
+    },
+    {
+      "log_partition": 14.561093023844043,
+      "observables": {
+        "abs_magnetization": 0.7647123932216823,
+        "binder_cumulant": 0.5815276591204838,
+        "energy_per_site": -1.3791164822593522,
+        "mean_abs_magnetization": 12.235398291546916,
+        "mean_energy": -22.065863716149636,
+        "mean_energy_squared": 568.153864483731,
+        "mean_magnetization": 8.881784197001252e-15,
+        "mean_magnetization_fourth": 35279.25869809085,
+        "mean_magnetization_squared": 167.63539377578067,
+        "specific_heat": 0.8125152294404201,
+        "susceptibility": 0.44826056057478714,
+        "temperature": 2.5
+      },
+      "temperature": 2.5
+    },
+    {
+      "log_partition": 14.231417850305533,
+      "observables": {
+        "abs_magnetization": 0.7294191068069045,
+        "binder_cumulant": 0.5631651464489338,
+        "energy_per_site": -1.2988075894770497,
+        "mean_abs_magnetization": 11.670705708910472,
+        "mean_energy": -20.780921431632795,
+        "mean_energy_squared": 517.3774431916638,
+        "mean_magnetization": 5.329070518200751e-15,
+        "mean_magnetization_fourth": 31860.878659952374,
+        "mean_magnetization_squared": 155.92279314503907,
+        "specific_heat": 0.7907798413828456,
+        "susceptibility": 0.47397647598662485,
+        "temperature": 2.6
+      },
+      "temperature": 2.6
+    },
+    {
+      "log_partition": 13.693389079051633,
+      "observables": {
+        "abs_magnetization": 0.6616940949164584,
+        "binder_cumulant": 0.5229308605197351,
+        "energy_per_site": -1.1482846941666232,
+        "mean_abs_magnetization": 10.587105518663334,
+        "mean_energy": -18.37255510666597,
+        "mean_energy_squared": 426.3520637524037,
+        "mean_magnetization": -1.2434497875801753e-14,
+        "mean_magnetization_fourth": 25751.80182757319,
+        "mean_magnetization_squared": 134.13821458278676,
+        "specific_heat": 0.7079183881132483,
+        "susceptibility": 0.4922190026668557,
+        "temperature": 2.8
+      },
+      "temperature": 2.8
+    },
+    {
+      "log_partition": 13.281033455583675,
+      "observables": {
+        "abs_magnetization": 0.6012913260391131,
+        "binder_cumulant": 0.4805406600594032,
+        "energy_per_site": -1.0170696269550954,
+        "mean_abs_magnetization": 9.620661216625809,
+        "mean_energy": -16.273114031281526,
+        "mean_energy_squared": 351.6656391275971,
+        "mean_magnetization": 0.0,
+        "mean_magnetization_fourth": 20772.22357757324,
+        "mean_magnetization_squared": 115.45296405709726,
+        "specific_heat": 0.60313471425351,
+        "susceptibility": 0.4769967044168597,
+        "temperature": 3.0
+      },
+      "temperature": 3.0
+    },
+    {
+      "log_partition": 12.960559792198891,
+      "observables": {
+        "abs_magnetization": 0.5498194024546259,
+        "binder_cumulant": 0.4386747583835685,
+        "energy_per_site": -0.9067983803783943,
+        "mean_abs_magnetization": 8.797110439274014,
+        "mean_energy": -14.50877408605431,
+        "mean_energy_squared": 292.64544282450436,
+        "mean_magnetization": -8.881784197001252e-15,
+        "mean_magnetization_fourth": 16872.662204961947,
+        "mean_magnetization_squared": 100.09765253014976,
+        "specific_heat": 0.5013483724630329,
+        "susceptibility": 0.443525399401678,
+        "temperature": 3.2
+      },
+      "temperature": 3.2
+    }
+  ],
+  "finished_at": "2026-08-18T00:27:22.757313-04:00",
+  "git": {
+    "commit": "2178baabdc9f05d1efc1cdbb4608b74112e2a3bf",
+    "dirty": true
+  },
+  "metropolis": {
+    "12": [
+      {
+        "acceptance_rate": 0.013528356481481481,
+        "n_samples": 96000,
+        "observables": {
+          "abs_magnetization": 0.986533130787037,
+          "binder_cumulant": 0.6662947671766282,
+          "energy_per_site": -1.951175925925926,
+          "mean_abs_magnetization": 142.06077083333332,
+          "mean_energy": -280.96933333333334,
+          "mean_energy_squared": 79007.78066666667,
+          "mean_magnetization": 4.436770833333333,
+          "mean_magnetization_fourth": 407972942.1435,
+          "mean_magnetization_squared": 20187.081875,
+          "specific_heat": 0.19757528669409416,
+          "susceptibility": 0.026941042773850548,
+          "temperature": 1.5
+        },
+        "seed": 121729,
+        "temperature": 1.5
+      },
+      {
+        "acceptance_rate": 0.029344835069444443,
+        "n_samples": 96000,
+        "observables": {
+          "abs_magnetization": 0.9700870949074074,
+          "binder_cumulant": 0.6655751594600672,
+          "energy_per_site": -1.8982222222222223,
+          "mean_abs_magnetization": 139.69254166666667,
+          "mean_energy": -273.344,
+          "mean_energy_squared": 74860.24866666667,
+          "mean_magnetization": 8.738833333333334,
+          "mean_magnetization_fourth": 382705343.3886667,
+          "mean_magnetization_squared": 19530.905166666667,
+          "specific_heat": 0.344353927976436,
+          "susceptibility": 0.06903173763587392,
+          "temperature": 1.7
+        },
+        "seed": 121730,
+        "temperature": 1.7
+      },
+      {
+        "acceptance_rate": 0.057585551697530865,
+        "n_samples": 96000,
+        "observables": {
+          "abs_magnetization": 0.9383967013888888,
+          "binder_cumulant": 0.663173855606779,
+          "energy_per_site": -1.809859953703704,
+          "mean_abs_magnetization": 135.129125,
+          "mean_energy": -260.61983333333336,
+          "mean_energy_squared": 68216.733,
+          "mean_magnetization": -25.542916666666667,
+          "mean_magnetization_fourth": 338961064.22433335,
+          "mean_magnetization_squared": 18315.188083333334,
+          "specific_heat": 0.5656268723174982,
+          "susceptibility": 0.20214788036444545,
+          "temperature": 1.9
+        },
+        "seed": 121731,
+        "temperature": 1.9
+      },
+      {
+        "acceptance_rate": 0.07960276813271605,
+        "n_samples": 96000,
+        "observables": {
+          "abs_magnetization": 0.9105147569444445,
+          "binder_cumulant": 0.6597548210471956,
+          "energy_per_site": -1.7441001157407408,
+          "mean_abs_magnetization": 131.114125,
+          "mean_energy": -251.15041666666667,
+          "mean_energy_squared": 63497.914666666664,
+          "mean_magnetization": 11.507958333333333,
+          "mean_magnetization_fourth": 305618214.18333334,
+          "mean_magnetization_squared": 17303.461833333335,
+          "specific_heat": 0.7315674910180279,
+          "susceptibility": 0.39079187089482226,
+          "temperature": 2.0
+        },
+        "seed": 121732,
+        "temperature": 2.0
+      },
+      {
+        "acceptance_rate": 0.10859413580246914,
+        "n_samples": 96000,
+        "observables": {
+          "abs_magnetization": 0.8695422453703704,
+          "binder_cumulant": 0.6523952921618414,
+          "energy_per_site": -1.6618064236111112,
+          "mean_abs_magnetization": 125.21408333333333,
+          "mean_energy": -239.300125,
+          "mean_energy_squared": 57859.73616666667,
+          "mean_magnetization": 0.7765,
+          "mean_magnetization_fourth": 264205224.59633332,
+          "mean_magnetization_squared": 15917.221083333334,
+          "specific_heat": 0.9372422865505143,
+          "susceptibility": 0.7892011188041951,
+          "temperature": 2.1
+        },
+        "seed": 121733,
+        "temperature": 2.1
+      },
+      {
+        "acceptance_rate": 0.12659358121141975,
+        "n_samples": 96000,
+        "observables": {
+          "abs_magnetization": 0.8400836226851852,
+          "binder_cumulant": 0.6453426763652665,
+          "energy_per_site": -1.6114108796296298,
+          "mean_abs_magnetization": 120.97204166666667,
+          "mean_energy": -232.04316666666668,
+          "mean_energy_squared": 54553.579333333335,
+          "mean_magnetization": 18.264,
+          "mean_magnetization_fourth": 239153429.09933335,
+          "mean_magnetization_squared": 14992.470833333333,
+          "specific_heat": 1.0659637891936855,
+          "susceptibility": 1.1570929209676852,
+          "temperature": 2.15
+        },
+        "seed": 121734,
+        "temperature": 2.15
+      },
+      {
+        "acceptance_rate": 0.14689445891203703,
+        "n_samples": 96000,
+        "observables": {
+          "abs_magnetization": 0.8046014178240741,
+          "binder_cumulant": 0.6350715717463944,
+          "energy_per_site": -1.556506076388889,
+          "mean_abs_magnetization": 115.86260416666667,
+          "mean_energy": -224.136875,
+          "mean_energy_squared": 51073.59816666667,
+          "mean_magnetization": -5.840020833333333,
+          "mean_magnetization_fourth": 212867037.21883333,
+          "mean_magnetization_squared": 13944.075708333334,
+          "specific_heat": 1.1998671830536125,
+          "susceptibility": 1.6412015910721223,
+          "temperature": 2.2
+        },
+        "seed": 121735,
+        "temperature": 2.2
+      },
+      {
+        "acceptance_rate": 0.1714154369212963,
+        "n_samples": 96000,
+        "observables": {
+          "abs_magnetization": 0.7567078993055555,
+          "binder_cumulant": 0.6182890670454375,
+          "energy_per_site": -1.4902094907407408,
+          "mean_abs_magnetization": 108.9659375,
+          "mean_energy": -214.59016666666668,
+          "mean_energy_squared": 47016.528666666665,
+          "mean_magnetization": 3.6334375,
+          "mean_magnetization_fourth": 182322833.57183334,
+          "mean_magnetization_squared": 12618.060458333333,
+          "specific_heat": 1.3272826291342728,
+          "susceptibility": 2.29779297246737,
+          "temperature": 2.25
+        },
+        "seed": 121736,
+        "temperature": 2.25
+      },
+      {
+        "acceptance_rate": 0.18067807195216048,
+        "n_samples": 96000,
+        "observables": {
+          "abs_magnetization": 0.7404421296296296,
+          "binder_cumulant": 0.6124324543212775,
+          "energy_per_site": -1.4668165509259259,
+          "mean_abs_magnetization": 106.62366666666667,
+          "mean_energy": -211.22158333333334,
+          "mean_energy_squared": 45616.47633333333,
+          "mean_magnetization": 0.064875,
+          "mean_magnetization_fourth": 172292364.10733333,
+          "mean_magnetization_squared": 12173.029833333334,
+          "specific_heat": 1.3512329318645948,
+          "susceptibility": 2.46179743345427,
+          "temperature": 2.269185314213022
+        },
+        "seed": 121737,
+        "temperature": 2.269185314213022
+      },
+      {
+        "acceptance_rate": 0.19659529320987654,
+        "n_samples": 96000,
+        "observables": {
+          "abs_magnetization": 0.7083577835648148,
+          "binder_cumulant": 0.5991008095844923,
+          "energy_per_site": -1.4250789930555556,
+          "mean_abs_magnetization": 102.00352083333334,
+          "mean_energy": -205.211375,
+          "mean_energy_squared": 43169.64083333333,
+          "mean_magnetization": 0.27972916666666664,
+          "mean_magnetization_fourth": 154555615.51516667,
+          "mean_magnetization_squared": 11336.113291666667,
+          "specific_heat": 1.3888001522037141,
+          "susceptibility": 2.8121830593912973,
+          "temperature": 2.3
+        },
+        "seed": 121738,
+        "temperature": 2.3
+      },
+      {
+        "acceptance_rate": 0.22531083622685186,
+        "n_samples": 96000,
+        "observables": {
+          "abs_magnetization": 0.6463871527777778,
+          "binder_cumulant": 0.5681025111594643,
+          "energy_per_site": -1.3515046296296296,
+          "mean_abs_magnetization": 93.07975,
+          "mean_energy": -194.61666666666667,
+          "mean_energy_squared": 39005.121,
+          "mean_magnetization": 0.275375,
+          "mean_magnetization_fourth": 124530587.93466666,
+          "mean_magnetization_squared": 9803.633166666667,
+          "specific_heat": 1.42029331466671,
+          "susceptibility": 3.368183530154155,
+          "temperature": 2.35
+        },
+        "seed": 121739,
+        "temperature": 2.35
+      },
+      {
+        "acceptance_rate": 0.25107988522376545,
+        "n_samples": 96000,
+        "observables": {
+          "abs_magnetization": 0.5910769675925925,
+          "binder_cumulant": 0.5370930375355645,
+          "energy_per_site": -1.2848822337962964,
+          "mean_abs_magnetization": 85.11508333333333,
+          "mean_energy": -185.02304166666667,
+          "mean_energy_squared": 35355.81283333333,
+          "mean_magnetization": -1.4244583333333334,
+          "mean_magnetization_fourth": 99801405.103,
+          "mean_magnetization_squared": 8477.36425,
+          "specific_heat": 1.3530657862512792,
+          "susceptibility": 3.567091548494569,
+          "temperature": 2.4
+        },
+        "seed": 121740,
+        "temperature": 2.4
+      },
+      {
+        "acceptance_rate": 0.27686405285493826,
+        "n_samples": 96000,
+        "observables": {
+          "abs_magnetization": 0.5364528356481482,
+          "binder_cumulant": 0.5001953410846122,
+          "energy_per_site": -1.2223723958333332,
+          "mean_abs_magnetization": 77.24920833333333,
+          "mean_energy": -176.021625,
+          "mean_energy_squared": 32071.2925,
+          "mean_magnetization": 2.462833333333333,
+          "mean_magnetization_fourth": 78826197.34366667,
+          "mean_magnetization_squared": 7250.609416666666,
+          "specific_heat": 1.2583646077553032,
+          "susceptibility": 3.637100987924975,
+          "temperature": 2.45
+        },
+        "seed": 121741,
+        "temperature": 2.45
+      },
+      {
+        "acceptance_rate": 0.30275742669753086,
+        "n_samples": 96000,
+        "observables": {
+          "abs_magnetization": 0.4820289351851852,
+          "binder_cumulant": 0.4569684843409644,
+          "energy_per_site": -1.159791377314815,
+          "mean_abs_magnetization": 69.41216666666666,
+          "mean_energy": -167.00995833333334,
+          "mean_energy_squared": 28906.2645,
+          "mean_magnetization": 0.08191666666666667,
+          "mean_magnetization_fourth": 60320883.380666666,
+          "mean_magnetization_squared": 6085.001666666667,
+          "specific_heat": 1.126598130553624,
+          "susceptibility": 3.5193132925154336,
+          "temperature": 2.5
+        },
+        "seed": 121742,
+        "temperature": 2.5
+      },
+      {
+        "acceptance_rate": 0.3462434413580247,
+        "n_samples": 96000,
+        "observables": {
+          "abs_magnetization": 0.39317418981481483,
+          "binder_cumulant": 0.36735932211386246,
+          "energy_per_site": -1.0579126157407408,
+          "mean_abs_magnetization": 56.61708333333333,
+          "mean_energy": -152.33941666666666,
+          "mean_energy_squared": 24068.61733333333,
+          "mean_magnetization": -0.134625,
+          "mean_magnetization_fourth": 35569107.513333336,
+          "mean_magnetization_squared": 4329.096833333333,
+          "specific_heat": 0.8848202898926023,
+          "susceptibility": 3.001075609400966,
+          "temperature": 2.6
+        },
+        "seed": 121743,
+        "temperature": 2.6
+      },
+      {
+        "acceptance_rate": 0.410853515625,
+        "n_samples": 96000,
+        "observables": {
+          "abs_magnetization": 0.28845066550925924,
+          "binder_cumulant": 0.23288747965409196,
+          "energy_per_site": -0.9179129050925927,
+          "mean_abs_magnetization": 41.53689583333333,
+          "mean_energy": -132.17945833333334,
+          "mean_energy_squared": 18124.639166666668,
+          "mean_magnetization": -0.022770833333333334,
+          "mean_magnetization_fourth": 14463681.344833333,
+          "mean_magnetization_squared": 2506.9707083333333,
+          "specific_heat": 0.578612139821837,
+          "susceptibility": 1.9386334148416404,
+          "temperature": 2.8
+        },
+        "seed": 121744,
+        "temperature": 2.8
+      },
+      {
+        "acceptance_rate": 0.4595816936728395,
+        "n_samples": 96000,
+        "observables": {
+          "abs_magnetization": 0.2314318576388889,
+          "binder_cumulant": 0.15198909563574925,
+          "energy_per_site": -0.8205966435185185,
+          "mean_abs_magnetization": 33.3261875,
+          "mean_energy": -118.16591666666666,
+          "mean_energy_squared": 14507.201,
+          "mean_magnetization": -0.21414583333333334,
+          "mean_magnetization_fourth": 7086223.9405,
+          "mean_magnetization_squared": 1668.960625,
+          "specific_heat": 0.419766310437029,
+          "susceptibility": 1.2924209530436193,
+          "temperature": 3.0
+        },
+        "seed": 121745,
+        "temperature": 3.0
+      },
+      {
+        "acceptance_rate": 0.4992880015432099,
+        "n_samples": 96000,
+        "observables": {
+          "abs_magnetization": 0.19565017361111112,
+          "binder_cumulant": 0.10302593348580669,
+          "energy_per_site": -0.745855613425926,
+          "mean_abs_magnetization": 28.173625,
+          "mean_energy": -107.40320833333334,
+          "mean_energy_squared": 12022.1245,
+          "mean_magnetization": 0.20845833333333333,
+          "mean_magnetization_fourth": 3954418.79,
+          "mean_magnetization_squared": 1212.246,
+          "specific_heat": 0.3300478378001552,
+          "susceptibility": 0.9081876179673937,
+          "temperature": 3.2
+        },
+        "seed": 121746,
+        "temperature": 3.2
+      }
+    ],
+    "4": [
+      {
+        "acceptance_rate": 0.0135328125,
+        "n_samples": 384000,
+        "observables": {
+          "abs_magnetization": 0.9863544921875,
+          "binder_cumulant": 0.6639964117639433,
+          "energy_per_site": -1.9512415364583333,
+          "mean_abs_magnetization": 15.781671875,
+          "mean_energy": -31.219864583333333,
+          "mean_energy_squared": 981.817625,
+          "mean_magnetization": -0.6479322916666667,
+          "mean_magnetization_fourth": 62879.355208333334,
+          "mean_magnetization_squared": 249.75917708333333,
+          "specific_heat": 0.1982688999535848,
+          "susceptibility": 0.029083746381970123,
+          "temperature": 1.5
+        },
+        "seed": 41729,
+        "temperature": 1.5
+      },
+      {
+        "acceptance_rate": 0.029697135416666666,
+        "n_samples": 384000,
+        "observables": {
+          "abs_magnetization": 0.9695934244791666,
+          "binder_cumulant": 0.6599472487234693,
+          "energy_per_site": -1.897685546875,
+          "mean_abs_magnetization": 15.513494791666666,
+          "mean_energy": -30.36296875,
+          "mean_energy_squared": 937.5359583333334,
+          "mean_magnetization": 0.289671875,
+          "mean_magnetization_fourth": 60010.561625,
+          "mean_magnetization_squared": 242.53815625,
+          "specific_heat": 0.33793440786887446,
+          "susceptibility": 0.06873660290188276,
+          "temperature": 1.7
+        },
+        "seed": 41730,
+        "temperature": 1.7
+      },
+      {
+        "acceptance_rate": 0.05770911458333333,
+        "n_samples": 384000,
+        "observables": {
+          "abs_magnetization": 0.9397864583333333,
+          "binder_cumulant": 0.6514097059287863,
+          "energy_per_site": -1.8120338541666667,
+          "mean_abs_magnetization": 15.036583333333333,
+          "mean_energy": -28.992541666666668,
+          "mean_energy_squared": 870.3211666666666,
+          "mean_magnetization": 0.3250208333333333,
+          "mean_magnetization_fourth": 55569.34033333333,
+          "mean_magnetization_squared": 230.51508333333334,
+          "specific_heat": 0.515126287625758,
+          "susceptibility": 0.14527121687682845,
+          "temperature": 1.9
+        },
+        "seed": 41731,
+        "temperature": 1.9
+      },
+      {
+        "acceptance_rate": 0.07735514322916667,
+        "n_samples": 384000,
+        "observables": {
+          "abs_magnetization": 0.9183505859375,
+          "binder_cumulant": 0.6446329025953796,
+          "energy_per_site": -1.7538821614583333,
+          "mean_abs_magnetization": 14.693609375,
+          "mean_energy": -28.062114583333333,
+          "mean_energy_squared": 826.495625,
+          "mean_magnetization": -0.3001510416666667,
+          "mean_magnetization_fourth": 52658.92070833333,
+          "mean_magnetization_squared": 222.24742708333332,
+          "specific_heat": 0.6095835954979805,
+          "susceptibility": 0.19828970682017033,
+          "temperature": 2.0
+        },
+        "seed": 41732,
+        "temperature": 2.0
+      },
+      {
+        "acceptance_rate": 0.1001162109375,
+        "n_samples": 384000,
+        "observables": {
+          "abs_magnetization": 0.8940615234375,
+          "binder_cumulant": 0.6363112256431274,
+          "energy_per_site": -1.6905436197916666,
+          "mean_abs_magnetization": 14.304984375,
+          "mean_energy": -27.048697916666665,
+          "mean_energy_squared": 780.0052083333334,
+          "mean_magnetization": 0.073234375,
+          "mean_magnetization_fourth": 49540.60229166667,
+          "mean_magnetization_squared": 213.08607291666667,
+          "specific_heat": 0.6855605066077917,
+          "susceptibility": 0.2515921115378723,
+          "temperature": 2.1
+        },
+        "seed": 41733,
+        "temperature": 2.1
+      },
+      {
+        "acceptance_rate": 0.11278919270833333,
+        "n_samples": 384000,
+        "observables": {
+          "abs_magnetization": 0.8803056640625,
+          "binder_cumulant": 0.631336782900868,
+          "energy_per_site": -1.65539453125,
+          "mean_abs_magnetization": 14.084890625,
+          "mean_energy": -26.4863125,
+          "mean_energy_squared": 754.8775,
+          "mean_magnetization": -0.18121354166666667,
+          "mean_magnetization_fourth": 47855.88670833333,
+          "mean_magnetization_squared": 208.01380208333333,
+          "specific_heat": 0.7213730415406137,
+          "susceptibility": 0.2799319234046641,
+          "temperature": 2.15
+        },
+        "seed": 41734,
+        "temperature": 2.15
+      },
+      {
+        "acceptance_rate": 0.12653743489583333,
+        "n_samples": 384000,
+        "observables": {
+          "abs_magnetization": 0.8654388020833333,
+          "binder_cumulant": 0.6257407622735969,
+          "energy_per_site": -1.6183372395833333,
+          "mean_abs_magnetization": 13.847020833333334,
+          "mean_energy": -25.893395833333333,
+          "mean_energy_squared": 728.6605,
+          "mean_magnetization": -0.034416666666666665,
+          "mean_magnetization_fourth": 46092.425083333335,
+          "mean_magnetization_squared": 202.61327083333333,
+          "specific_heat": 0.7514534119100722,
+          "susceptibility": 0.3089001384819877,
+          "temperature": 2.2
+        },
+        "seed": 41735,
+        "temperature": 2.2
+      },
+      {
+        "acceptance_rate": 0.14079720052083333,
+        "n_samples": 384000,
+        "observables": {
+          "abs_magnetization": 0.8505328776041666,
+          "binder_cumulant": 0.6199022058023484,
+          "energy_per_site": -1.5816197916666668,
+          "mean_abs_magnetization": 13.608526041666666,
+          "mean_energy": -25.30591666666667,
+          "mean_energy_squared": 703.06875,
+          "mean_magnetization": 0.06311979166666666,
+          "mean_magnetization_fourth": 44370.17379166667,
+          "mean_magnetization_squared": 197.25919791666666,
+          "specific_heat": 0.7738189093792858,
+          "susceptibility": 0.33520046916519025,
+          "temperature": 2.25
+        },
+        "seed": 41736,
+        "temperature": 2.25
+      },
+      {
+        "acceptance_rate": 0.1466814453125,
+        "n_samples": 384000,
+        "observables": {
+          "abs_magnetization": 0.8440498046875,
+          "binder_cumulant": 0.6172229939052014,
+          "energy_per_site": -1.5659244791666667,
+          "mean_abs_magnetization": 13.504796875,
+          "mean_energy": -25.054791666666667,
+          "mean_energy_squared": 692.3594166666667,
+          "mean_magnetization": 0.170171875,
+          "mean_magnetization_fourth": 43652.687458333334,
+          "mean_magnetization_squared": 194.97186458333334,
+          "specific_heat": 0.7843063756417239,
+          "susceptibility": 0.3468294840622881,
+          "temperature": 2.269185314213022
+        },
+        "seed": 41737,
+        "temperature": 2.269185314213022
+      },
+      {
+        "acceptance_rate": 0.15631399739583332,
+        "n_samples": 384000,
+        "observables": {
+          "abs_magnetization": 0.8335084635416666,
+          "binder_cumulant": 0.6130113709241523,
+          "energy_per_site": -1.5405416666666667,
+          "mean_abs_magnetization": 13.336135416666666,
+          "mean_energy": -24.648666666666667,
+          "mean_energy_squared": 674.6159166666666,
+          "mean_magnetization": -0.0241875,
+          "mean_magnetization_fourth": 42453.38258333333,
+          "mean_magnetization_squared": 191.22577083333334,
+          "specific_heat": 0.7922867228523408,
+          "susceptibility": 0.36340388537125956,
+          "temperature": 2.3
+        },
+        "seed": 41738,
+        "temperature": 2.3
+      },
+      {
+        "acceptance_rate": 0.1716517578125,
+        "n_samples": 384000,
+        "observables": {
+          "abs_magnetization": 0.816931640625,
+          "binder_cumulant": 0.6058428842536876,
+          "energy_per_site": -1.5009016927083334,
+          "mean_abs_magnetization": 13.07090625,
+          "mean_energy": -24.014427083333334,
+          "mean_energy_squared": 648.084625,
+          "mean_magnetization": 0.0528125,
+          "mean_magnetization_fourth": 40666.9835,
+          "mean_magnetization_squared": 185.4495,
+          "specific_heat": 0.8079664651342962,
+          "susceptibility": 0.38832206924763085,
+          "temperature": 2.35
+        },
+        "seed": 41739,
+        "temperature": 2.35
+      },
+      {
+        "acceptance_rate": 0.18809375,
+        "n_samples": 384000,
+        "observables": {
+          "abs_magnetization": 0.7997347005208333,
+          "binder_cumulant": 0.5982067948428101,
+          "energy_per_site": -1.4604055989583333,
+          "mean_abs_magnetization": 12.795755208333333,
+          "mean_energy": -23.366489583333333,
+          "mean_energy_squared": 620.966375,
+          "mean_magnetization": 0.03671354166666667,
+          "mean_magnetization_fourth": 38837.77229166667,
+          "mean_magnetization_squared": 179.50032291666668,
+          "specific_heat": 0.8135149690969489,
+          "susceptibility": 0.41065030117388196,
+          "temperature": 2.4
+        },
+        "seed": 41740,
+        "temperature": 2.4
+      },
+      {
+        "acceptance_rate": 0.20408404947916667,
+        "n_samples": 384000,
+        "observables": {
+          "abs_magnetization": 0.7824384765625,
+          "binder_cumulant": 0.5901236307795539,
+          "energy_per_site": -1.4205221354166666,
+          "mean_abs_magnetization": 12.519015625,
+          "mean_energy": -22.728354166666666,
+          "mean_energy_squared": 594.8116666666666,
+          "mean_magnetization": 0.04086979166666667,
+          "mean_magnetization_fourth": 37069.625125,
+          "mean_magnetization_squared": 173.62890625,
+          "specific_heat": 0.8145937478262455,
+          "susceptibility": 0.4312029089542313,
+          "temperature": 2.45
+        },
+        "seed": 41741,
+        "temperature": 2.45
+      },
+      {
+        "acceptance_rate": 0.22106569010416666,
+        "n_samples": 384000,
+        "observables": {
+          "abs_magnetization": 0.7643401692708334,
+          "binder_cumulant": 0.5813786705250374,
+          "energy_per_site": -1.3787395833333334,
+          "mean_abs_magnetization": 12.229442708333334,
+          "mean_energy": -22.059833333333334,
+          "mean_energy_squared": 567.8665,
+          "mean_magnetization": 0.09125520833333334,
+          "mean_magnetization_fourth": 35257.341458333336,
+          "mean_magnetization_squared": 167.55348958333335,
+          "specific_heat": 0.8123025330555551,
+          "susceptibility": 0.44985551567314985,
+          "temperature": 2.5
+        },
+        "seed": 41742,
+        "temperature": 2.5
+      },
+      {
+        "acceptance_rate": 0.25422395833333333,
+        "n_samples": 384000,
+        "observables": {
+          "abs_magnetization": 0.730162109375,
+          "binder_cumulant": 0.5636472748597219,
+          "energy_per_site": -1.300109375,
+          "mean_abs_magnetization": 11.68259375,
+          "mean_energy": -20.80175,
+          "mean_energy_squared": 518.1168333333334,
+          "mean_magnetization": 0.012697916666666666,
+          "mean_magnetization_fourth": 31910.519083333333,
+          "mean_magnetization_squared": 156.13039583333332,
+          "specific_heat": 0.7896082680365518,
+          "susceptibility": 0.4722932477354387,
+          "temperature": 2.6
+        },
+        "seed": 41743,
+        "temperature": 2.6
+      },
+      {
+        "acceptance_rate": 0.3201315755208333,
+        "n_samples": 384000,
+        "observables": {
+          "abs_magnetization": 0.66171875,
+          "binder_cumulant": 0.5229521396634562,
+          "energy_per_site": -1.1477662760416667,
+          "mean_abs_magnetization": 10.5875,
+          "mean_energy": -18.364260416666667,
+          "mean_energy_squared": 426.15970833333336,
+          "mean_magnetization": -0.0015,
+          "mean_magnetization_fourth": 25754.874333333333,
+          "mean_magnetization_squared": 134.14920833333332,
+          "specific_heat": 0.7088141556296491,
+          "susceptibility": 0.49227794828869015,
+          "temperature": 2.8
+        },
+        "seed": 41744,
+        "temperature": 2.8
+      },
+      {
+        "acceptance_rate": 0.37899876302083335,
+        "n_samples": 384000,
+        "observables": {
+          "abs_magnetization": 0.6014921875,
+          "binder_cumulant": 0.4805277651235683,
+          "energy_per_site": -1.0179036458333333,
+          "mean_abs_magnetization": 9.623875,
+          "mean_energy": -16.286458333333332,
+          "mean_energy_squared": 352.27116666666666,
+          "mean_magnetization": 0.000625,
+          "mean_magnetization_fourth": 20808.332333333332,
+          "mean_magnetization_squared": 115.55183333333333,
+          "specific_heat": 0.6043225112726662,
+          "susceptibility": 0.4777679857855904,
+          "temperature": 3.0
+        },
+        "seed": 41745,
+        "temperature": 3.0
+      },
+      {
+        "acceptance_rate": 0.43187467447916666,
+        "n_samples": 384000,
+        "observables": {
+          "abs_magnetization": 0.5501715494791667,
+          "binder_cumulant": 0.439265834209408,
+          "energy_per_site": -0.9068515625,
+          "mean_abs_magnetization": 8.802744791666667,
+          "mean_energy": -14.509625,
+          "mean_energy_squared": 292.503,
+          "mean_magnetization": 0.0006302083333333333,
+          "mean_magnetization_fourth": 16857.97670833333,
+          "mean_magnetization_squared": 100.10680208333333,
+          "specific_heat": 0.5003282614707946,
+          "susceptibility": 0.4417673089085683,
+          "temperature": 3.2
+        },
+        "seed": 41746,
+        "temperature": 3.2
+      }
+    ],
+    "8": [
+      {
+        "acceptance_rate": 0.013588216145833333,
+        "n_samples": 64000,
+        "observables": {
+          "abs_magnetization": 0.98639208984375,
+          "binder_cumulant": 0.6658494869825581,
+          "energy_per_site": -1.9507373046875,
+          "mean_abs_magnetization": 63.12909375,
+          "mean_energy": -124.8471875,
+          "mean_energy_squared": 15615.49725,
+          "mean_magnetization": -1.98065625,
+          "mean_magnetization_fourth": 15942451.51675,
+          "mean_magnetization_squared": 3987.9146875,
+          "specific_heat": 0.19914599541558192,
+          "susceptibility": 0.02741885212198743,
+          "temperature": 1.5
+        },
+        "seed": 81729,
+        "temperature": 1.5
+      },
+      {
+        "acceptance_rate": 0.029339680989583332,
+        "n_samples": 64000,
+        "observables": {
+          "abs_magnetization": 0.96998779296875,
+          "binder_cumulant": 0.6643633909722402,
+          "energy_per_site": -1.8978720703125,
+          "mean_abs_magnetization": 62.07921875,
+          "mean_energy": -121.4638125,
+          "mean_energy_squared": 14816.88125,
+          "mean_magnetization": 5.81684375,
+          "mean_magnetization_fourth": 15014211.56675,
+          "mean_magnetization_squared": 3861.4994375,
+          "specific_heat": 0.3429038871369083,
+          "susceptibility": 0.0704966625886778,
+          "temperature": 1.7
+        },
+        "seed": 81730,
+        "temperature": 1.7
+      },
+      {
+        "acceptance_rate": 0.057756103515625,
+        "n_samples": 64000,
+        "observables": {
+          "abs_magnetization": 0.937634765625,
+          "binder_cumulant": 0.6597575343137521,
+          "energy_per_site": -1.8084560546875,
+          "mean_abs_magnetization": 60.008625,
+          "mean_energy": -115.7411875,
+          "mean_energy_squared": 13526.52025,
+          "mean_magnetization": 2.575,
+          "mean_magnetization_fourth": 13422420.9305,
+          "mean_magnetization_squared": 3626.273375,
+          "specific_heat": 0.5648275886852663,
+          "susceptibility": 0.20755181422183447,
+          "temperature": 1.9
+        },
+        "seed": 81731,
+        "temperature": 1.9
+      },
+      {
+        "acceptance_rate": 0.07946956380208334,
+        "n_samples": 64000,
+        "observables": {
+          "abs_magnetization": 0.91123876953125,
+          "binder_cumulant": 0.6546034535099337,
+          "energy_per_site": -1.745158203125,
+          "mean_abs_magnetization": 58.31928125,
+          "mean_energy": -111.690125,
+          "mean_energy_squared": 12657.1035,
+          "mean_magnetization": -1.04140625,
+          "mean_magnetization_fourth": 12305661.62325,
+          "mean_magnetization_squared": 3446.1395625,
+          "specific_heat": 0.712576083923345,
+          "susceptibility": 0.3515702889327983,
+          "temperature": 2.0
+        },
+        "seed": 81732,
+        "temperature": 2.0
+      },
+      {
+        "acceptance_rate": 0.10707657877604167,
+        "n_samples": 64000,
+        "observables": {
+          "abs_magnetization": 0.87394873046875,
+          "binder_cumulant": 0.6452472808888412,
+          "energy_per_site": -1.666349609375,
+          "mean_abs_magnetization": 55.93271875,
+          "mean_energy": -106.646375,
+          "mean_energy_squared": 11625.738,
+          "mean_magnetization": 1.37271875,
+          "mean_magnetization_fourth": 10958290.91075,
+          "mean_magnetization_squared": 3208.8389375,
+          "specific_heat": 0.8938800289093427,
+          "susceptibility": 0.5979904072425497,
+          "temperature": 2.1
+        },
+        "seed": 81733,
+        "temperature": 2.1
+      },
+      {
+        "acceptance_rate": 0.12370222981770833,
+        "n_samples": 64000,
+        "observables": {
+          "abs_magnetization": 0.84998876953125,
+          "binder_cumulant": 0.6384162219486895,
+          "energy_per_site": -1.619708984375,
+          "mean_abs_magnetization": 54.39928125,
+          "mean_energy": -103.661375,
+          "mean_energy_squared": 11034.077,
+          "mean_magnetization": -3.41603125,
+          "mean_magnetization_fourth": 10177059.78075,
+          "mean_magnetization_squared": 3062.9934375,
+          "specific_heat": 0.9748388761133476,
+          "susceptibility": 0.7537182920305084,
+          "temperature": 2.15
+        },
+        "seed": 81734,
+        "temperature": 2.15
+      },
+      {
+        "acceptance_rate": 0.143058349609375,
+        "n_samples": 64000,
+        "observables": {
+          "abs_magnetization": 0.82079931640625,
+          "binder_cumulant": 0.6289767833234857,
+          "energy_per_site": -1.5662978515625,
+          "mean_abs_magnetization": 52.53115625,
+          "mean_energy": -100.2430625,
+          "mean_energy_squared": 10375.72825,
+          "mean_magnetization": -1.62753125,
+          "mean_magnetization_fourth": 9312404.89675,
+          "mean_magnetization_squared": 2892.4759375,
+          "specific_heat": 1.055838941829467,
+          "susceptibility": 0.9442724470034491,
+          "temperature": 2.2
+        },
+        "seed": 81735,
+        "temperature": 2.2
+      },
+      {
+        "acceptance_rate": 0.16291243489583335,
+        "n_samples": 64000,
+        "observables": {
+          "abs_magnetization": 0.79054833984375,
+          "binder_cumulant": 0.6182582641670632,
+          "energy_per_site": -1.5134501953125,
+          "mean_abs_magnetization": 50.59509375,
+          "mean_energy": -96.8608125,
+          "mean_energy_squared": 9745.90325,
+          "mean_magnetization": 1.63321875,
+          "mean_magnetization_fourth": 8481557.28625,
+          "mean_magnetization_squared": 2721.3998125,
+          "specific_heat": 1.123105715555073,
+          "susceptibility": 1.1217798675604942,
+          "temperature": 2.25
+        },
+        "seed": 81736,
+        "temperature": 2.25
+      },
+      {
+        "acceptance_rate": 0.17184220377604167,
+        "n_samples": 64000,
+        "observables": {
+          "abs_magnetization": 0.778634765625,
+          "binder_cumulant": 0.6137295705354728,
+          "energy_per_site": -1.4929365234375,
+          "mean_abs_magnetization": 49.832625,
+          "mean_energy": -95.5479375,
+          "mean_energy_squared": 9506.51325,
+          "mean_magnetization": -1.5415,
+          "mean_magnetization_fourth": 8174707.284,
+          "mean_magnetization_squared": 2656.01025,
+          "specific_heat": 1.1443062263909678,
+          "susceptibility": 1.1893016634617322,
+          "temperature": 2.269185314213022
+        },
+        "seed": 81737,
+        "temperature": 2.269185314213022
+      },
+      {
+        "acceptance_rate": 0.1850302734375,
+        "n_samples": 64000,
+        "observables": {
+          "abs_magnetization": 0.75598046875,
+          "binder_cumulant": 0.6045411047141287,
+          "energy_per_site": -1.4565185546875,
+          "mean_abs_magnetization": 48.38275,
+          "mean_energy": -93.2171875,
+          "mean_energy_squared": 9083.14925,
+          "mean_magnetization": -0.3344375,
+          "mean_magnetization_fourth": 7619873.001,
+          "mean_magnetization_squared": 2534.3265,
+          "specific_heat": 1.162881629814052,
+          "susceptibility": 1.314103277428669,
+          "temperature": 2.3
+        },
+        "seed": 81738,
+        "temperature": 2.3
+      },
+      {
+        "acceptance_rate": 0.20688419596354166,
+        "n_samples": 64000,
+        "observables": {
+          "abs_magnetization": 0.719177734375,
+          "binder_cumulant": 0.5881956679350305,
+          "energy_per_site": -1.39784765625,
+          "mean_abs_magnetization": 46.027375,
+          "mean_energy": -89.46225,
+          "mean_energy_squared": 8422.963,
+          "mean_magnetization": -0.0511875,
+          "mean_magnetization_fourth": 6769281.7745,
+          "mean_magnetization_squared": 2340.804875,
+          "specific_heat": 1.1868176350653585,
+          "susceptibility": 1.477962936232547,
+          "temperature": 2.35
+        },
+        "seed": 81739,
+        "temperature": 2.35
+      },
+      {
+        "acceptance_rate": 0.23135270182291667,
+        "n_samples": 64000,
+        "observables": {
+          "abs_magnetization": 0.68174365234375,
+          "binder_cumulant": 0.5697490961438465,
+          "energy_per_site": -1.339171875,
+          "mean_abs_magnetization": 43.63159375,
+          "mean_energy": -85.707,
+          "mean_energy_squared": 7781.5325,
+          "mean_magnetization": 0.52784375,
+          "mean_magnetization_fourth": 5969297.54575,
+          "mean_magnetization_squared": 2150.5031875,
+          "specific_heat": 1.1822988579644147,
+          "susceptibility": 1.6066875933265687,
+          "temperature": 2.4
+        },
+        "seed": 81740,
+        "temperature": 2.4
+      },
+      {
+        "acceptance_rate": 0.25458699544270835,
+        "n_samples": 64000,
+        "observables": {
+          "abs_magnetization": 0.641130859375,
+          "binder_cumulant": 0.5473633309664603,
+          "energy_per_site": -1.2782958984375,
+          "mean_abs_magnetization": 41.032375,
+          "mean_energy": -81.8109375,
+          "mean_energy_squared": 7136.62775,
+          "mean_magnetization": -0.259875,
+          "mean_magnetization_fourth": 5177484.406,
+          "mean_magnetization_squared": 1952.64775,
+          "specific_heat": 1.1547226555890633,
+          "susceptibility": 1.71550989706234,
+          "temperature": 2.45
+        },
+        "seed": 81741,
+        "temperature": 2.45
+      },
+      {
+        "acceptance_rate": 0.27765901692708334,
+        "n_samples": 64000,
+        "observables": {
+          "abs_magnetization": 0.60563330078125,
+          "binder_cumulant": 0.5256439824796661,
+          "energy_per_site": -1.225484375,
+          "mean_abs_magnetization": 38.76053125,
+          "mean_energy": -78.431,
+          "mean_energy_squared": 6593.1315,
+          "mean_magnetization": 0.57134375,
+          "mean_magnetization_fourth": 4522607.80425,
+          "mean_magnetization_squared": 1782.7138125,
+          "specific_heat": 1.1042743475000023,
+          "susceptibility": 1.7520939357360832,
+          "temperature": 2.5
+        },
+        "seed": 81742,
+        "temperature": 2.5
+      },
+      {
+        "acceptance_rate": 0.3221783040364583,
+        "n_samples": 64000,
+        "observables": {
+          "abs_magnetization": 0.53175634765625,
+          "binder_cumulant": 0.4723826153439926,
+          "energy_per_site": -1.11833984375,
+          "mean_abs_magnetization": 34.03240625,
+          "mean_energy": -71.57375,
+          "mean_energy_squared": 5539.581,
+          "mean_magnetization": -0.10878125,
+          "mean_magnetization_fourth": 3302560.27275,
+          "mean_magnetization_squared": 1444.4589375,
+          "specific_heat": 0.9633397534613066,
+          "susceptibility": 1.7202780188399092,
+          "temperature": 2.6
+        },
+        "seed": 81743,
+        "temperature": 2.6
+      },
+      {
+        "acceptance_rate": 0.39616023763020836,
+        "n_samples": 64000,
+        "observables": {
+          "abs_magnetization": 0.41725830078125,
+          "binder_cumulant": 0.36445049422486364,
+          "energy_per_site": -0.953359375,
+          "mean_abs_magnetization": 26.70453125,
+          "mean_energy": -61.015,
+          "mean_energy_squared": 4062.246,
+          "mean_magnetization": 0.34428125,
+          "mean_magnetization_fourth": 1777483.18875,
+          "mean_magnetization_squared": 965.5336875,
+          "specific_heat": 0.6764504444355867,
+          "susceptibility": 1.4084916195188255,
+          "temperature": 2.8
+        },
+        "seed": 81744,
+        "temperature": 2.8
+      },
+      {
+        "acceptance_rate": 0.45018798828125,
+        "n_samples": 64000,
+        "observables": {
+          "abs_magnetization": 0.34625048828125,
+          "binder_cumulant": 0.27965475309432886,
+          "energy_per_site": -0.8415498046875,
+          "mean_abs_magnetization": 22.16003125,
+          "mean_energy": -53.8591875,
+          "mean_energy_squared": 3181.43525,
+          "mean_magnetization": -0.07146875,
+          "mean_magnetization_fourth": 1054927.30975,
+          "mean_magnetization_squared": 698.6831875,
+          "specific_heat": 0.48719300666639576,
+          "susceptibility": 1.081334388015747,
+          "temperature": 3.0
+        },
+        "seed": 81745,
+        "temperature": 3.0
+      },
+      {
+        "acceptance_rate": 0.49452587890625,
+        "n_samples": 64000,
+        "observables": {
+          "abs_magnetization": 0.29797265625,
+          "binder_cumulant": 0.2153571892578522,
+          "energy_per_site": -0.7575908203125,
+          "mean_abs_magnetization": 19.07025,
+          "mean_energy": -48.4858125,
+          "mean_energy_squared": 2588.39725,
+          "mean_magnetization": 0.054,
+          "mean_magnetization_fourth": 665984.709,
+          "mean_magnetization_squared": 531.90675,
+          "specific_heat": 0.3624316958844659,
+          "susceptibility": 0.8214468502807615,
+          "temperature": 3.2
+        },
+        "seed": 81746,
+        "temperature": 3.2
+      }
+    ]
+  },
+  "milestone": "M1",
+  "python": "3.13.7 (v3.13.7:bcee1c32211, Aug 14 2025, 19:10:51) [Clang 16.0.0 (clang-1600.0.26.6)]",
+  "sampler_settings": {
+    "4": {
+      "burn_sweeps": 1000,
+      "n_chains": 192,
+      "n_samples_per_chain": 2000,
+      "thin_sweeps": 2
+    },
+    "8": {
+      "burn_sweeps": 1000,
+      "n_chains": 64,
+      "n_samples_per_chain": 1000,
+      "thin_sweeps": 2
+    },
+    "12": {
+      "burn_sweeps": 1500,
+      "n_chains": 64,
+      "n_samples_per_chain": 1500,
+      "thin_sweeps": 2
+    }
+  },
+  "seed": 1729,
+  "started_at": "2026-08-18T00:26:48.976113-04:00",
+  "status": "PASS",
+  "temperature_grid": [
+    1.5,
+    1.7,
+    1.9,
+    2.0,
+    2.1,
+    2.15,
+    2.2,
+    2.25,
+    2.269185314213022,
+    2.3,
+    2.35,
+    2.4,
+    2.45,
+    2.5,
+    2.6,
+    2.8,
+    3.0,
+    3.2
+  ],
+  "unit_tests": {
+    "errors": 0,
+    "failures": 0,
+    "passed": true,
+    "skipped": 0,
+    "tests_run": 10
+  }
+}
