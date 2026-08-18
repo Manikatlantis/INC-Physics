@@ -65,3 +65,29 @@ explicitly marks it **PASSED** and records the validator's measured criteria.
 - Next action: implement M2 fixed-temperature trajectory-balance GFlowNets at
   T=3.0 and T=2.0 for L=4, then validate against the exact oracle.
 - Budget: day 1 of 7 complete; estimated 6 days remaining.
+
+## 2026-08-18 — M2 — PASSED
+
+- Done: trained separate two-hidden-layer, 128-unit autoregressive GFlowNets at
+  T=3.0 and T=2.0 with the squared trajectory-balance objective. Each model used
+  8,000 CPU optimizer steps, full-support exploration, and paired spin-flip
+  trajectories. Validation enumerated all 65,536 model probabilities and drew
+  2,000,000 seeded empirical terminals per temperature. Four GFlowNet unit tests
+  raised the complete suite to 14 passing tests.
+- Metrics at T=3.0: empirical KL(exact || GFlowNet)=0.014762 nats; exact model
+  KL=0.000511 nats; energy/site error=0.2222%; |m| error=0.1711%; learned
+  ln Z=13.280304 versus exact 13.281033 (0.0055% error).
+- Metrics at T=2.0: empirical KL(exact || GFlowNet)=0.015377 nats; exact model
+  KL=0.002200 nats; energy/site error=0.6169%; |m| error=0.3366%; learned
+  ln Z=17.011744 versus exact 17.105367 (0.5473% error).
+- Estimator note: empirical KL uses a disclosed Jeffreys pseudocount of 0.5 per
+  histogram bin so finite samples do not assign literal zero probability to
+  physically nonzero rare states. Unsmooth, exactly enumerated model KL is also
+  reported independently.
+- Artifacts: `results/m2_metrics_20260818T012603-0400.json`,
+  `results/m2_fixed_temperature_20260818T012603-0400.png`, and the two hashed
+  `results/m2_model_T*_20260818T012603-0400.pt` checkpoints.
+- Status: **PASSED**.
+- Next action: implement and validate the single temperature-conditioned model
+  for L=4 and L=8 in M3.
+- Budget: day 2 of 7; estimated 5 days remaining.
