@@ -4,6 +4,17 @@ This repository validates a temperature-conditioned generative flow network
 against exact and Markov-chain references for the periodic square-lattice Ising
 model. Work proceeds through the acceptance-gated milestones in `AGENTS.md`.
 
+## Methodology
+
+This project was executed with an agentic coding workflow. I designed
+the physics question, the milestone structure, and the validation gates
+(exact L=4 enumeration, seeded Metropolis baselines, acceptance-gated
+validators); an AI coding agent implemented the code within those gates.
+I audited the results, added the calibrated error analysis on the
+learned log Z route, and independently verified the L=4 partition
+function by direct enumeration. See AGENTS.md for the experiment
+specification and PROGRESS.md for the append-only run log.
+
 ## Reproduce validators
 
 ```bash
