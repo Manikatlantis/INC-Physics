@@ -37,4 +37,4 @@ The research narrative and headline critical-temperature estimates are in
 [`PROGRESS.md`](PROGRESS.md).
 
 The final eight-page paper is
-[`results/m6_ising_gflownet_paper_20260818T030303-0400.pdf`](results/m6_ising_gflownet_paper_20260818T030303-0400.pdf).
+[`results/m6_ising_gflownet_paper_20260818T041207-0400.pdf`](results/m6_ising_gflownet_paper_20260818T041207-0400.pdf).
