@@ -1,0 +1,81 @@
+{
+  "builder": {
+    "engine": "ReportLab two-column template",
+    "exit_code": 0,
+    "path": "paper/build_paper.py",
+    "stderr": "",
+    "stdout": "/Users/maniksharma/Desktop/INC-Physics/results/m6_ising_gflownet_paper_20260818T030303-0400.pdf"
+  },
+  "checks": {
+    "academic_page_count": true,
+    "all_five_figures_embedded": true,
+    "all_five_figures_provenanced": true,
+    "all_required_sections_and_claims": true,
+    "build_exit_zero": true,
+    "citation_allowlist": true,
+    "metadata_present": true,
+    "no_placeholders_or_orphan_markers": true,
+    "substantive_extracted_text": true
+  },
+  "details": {
+    "artifact_text": {
+      "results/m1_observables_20260818T002648-0400.png": true,
+      "results/m2_fixed_temperature_20260818T012603-0400.png": true,
+      "results/m3_conditioned_summary_20260818T015650-0400.png": true,
+      "results/m4_tc_summary_20260818T021212-0400.png": true,
+      "results/m4_trajectory_signatures_20260818T021212-0400.png": true
+    },
+    "cited_arxiv_ids": [
+      "2111.09266",
+      "2201.13259",
+      "2202.01361"
+    ],
+    "disallowed_arxiv_ids": [],
+    "placeholder_matches": [],
+    "required_text": {
+      "1. Introduction": true,
+      "2. Model and Methods": true,
+      "2.25 to 2.27": true,
+      "2.259472": true,
+      "2.2692": true,
+      "2.34 +/- 0.15": true,
+      "3. Validation Results": true,
+      "4. Predicting Critical Temperature": true,
+      "5. Discussion": true,
+      "6. Conclusion": true,
+      "Abstract": true,
+      "Artifact Provenance": true,
+      "MCMC still wins": true,
+      "References": true,
+      "multinomial draws from exactly enumerated model probabilities": true,
+      "nonphysical boundary curvature": true,
+      "opposite signs": true,
+      "overstates precision": true,
+      "roughly 90 minutes": true,
+      "true sequential rollouts": true
+    }
+  },
+  "duration_seconds": 0.607795,
+  "finished_at": "2026-08-18T03:03:04.315285-04:00",
+  "git": {
+    "commit": "18c1b3b4b546052943a57192934c27b8ee65df35",
+    "dirty": true
+  },
+  "milestone": "M6",
+  "pdf": {
+    "bytes": 1473479,
+    "embedded_images": 5,
+    "extracted_word_count": 2248,
+    "metadata": {
+      "author": "Independent Study in Computational Statistical Physics",
+      "subject": "GFlowNet sampling and critical-temperature inference for the 2D Ising model",
+      "title": "Learning Criticality with a Temperature-Conditioned GFlowNet"
+    },
+    "pages": 8,
+    "path": "results/m6_ising_gflownet_paper_20260818T030303-0400.pdf",
+    "sha256": "6059d4d1a4efea470cec503a8dca3ccc1bb5583e8d3d3aa25727faf9d41e89f3"
+  },
+  "python": "3.13.7 (v3.13.7:bcee1c32211, Aug 14 2025, 19:10:51) [Clang 16.0.0 (clang-1600.0.26.6)]",
+  "started_at": "2026-08-18T03:03:03.707490-04:00",
+  "status": "PASS"
+}

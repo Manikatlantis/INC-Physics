@@ -217,3 +217,37 @@ explicitly marks it **PASSED** and records the validator's measured criteria.
 - Status: **PASSED**. All M1-M6 milestones are now passed.
 - Next action: none; deliver the report, paper, metrics, checkpoints, and figures.
 - Budget: day 7 of 7 complete.
+
+## 2026-08-18 — Final calibration and wording revision — PASSED
+
+- Scope: presentation-only revision. No model was retrained, no new samples were
+  generated, and no validator acceptance threshold was changed.
+- Learned-logZ route: retained the raw M4 calculations but calibrated the L=8
+  result with the 6.5% L=4 known-truth miss. REPORT.md and the paper now report
+  `Tc(logZ) = 2.34 +/- 0.15` and distinguish the accurate exact-data
+  differentiation test from error in the learned logZ itself.
+- Observable route: removed the equal-weight consensus. The mixed
+  GFlowNet+Metropolis susceptibility extrapolation is reported as 2.274 and the
+  Binder mean as 2.246, an observable range of about 2.25 to 2.27; their
+  opposite-sign finite-size biases are not averaged.
+- Method control: applying the same peak and `1/L` fit to the existing M1
+  Metropolis curves at L=4, 8, and 12 gave peaks 2.830413, 2.550983, and
+  2.446206, with intercept 2.259472 and R-squared 0.99941. The coarser M1 grid
+  makes this a control rather than a precision estimate; no new sampling was
+  performed.
+- Sampling wording: M2's two million empirical observations are now identified
+  as multinomial draws from exactly enumerated model probabilities. They are
+  distributionally equivalent to terminal rollouts for this autoregressive
+  model but were not rollouts; M3/M4 used true sequential rollouts.
+- Runtime correction: the work and original report build occupied one automated
+  session of roughly 90 minutes wall-clock. No elapsed-calendar-day claim is
+  made by the revised narrative.
+- Validation: M5 passed all 9 unchanged checks at
+  `results/m5_metrics_20260818T030253-0400.json`; M6 passed all 9 unchanged
+  checks with 8 pages, 5 embedded figures, and 2,248 extracted words at
+  `results/m6_metrics_20260818T030303-0400.json`.
+- Artifacts: revised PDF
+  `results/m6_ising_gflownet_paper_20260818T030303-0400.pdf`; reproducible source
+  remains `paper/build_paper.py`.
+- Status: **PASSED**. Next action: commit and deliver this verified revision.
+- Timing: final task complete; no fictional calendar-day budget is asserted.

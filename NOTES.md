@@ -182,10 +182,12 @@ The important hyperparameters are:
 
 Validation uses two complementary KL measurements. Enumerating the
 autoregressive probability of every L=4 state gives a noise-free model KL. The
-required empirical KL comes from two million seeded terminal draws. Because a
-finite histogram inevitably misses extremely rare states whose exact
-probability is still nonzero, its reported estimator uses the standard Jeffreys
-half-count,
+required empirical KL comes from two million seeded multinomial draws from
+exactly enumerated model probabilities. For this normalized autoregressive
+model, those histogram draws are distributionally equivalent to terminals from
+sequential policy rollouts, but they were not rollouts. Because a finite
+histogram inevitably misses extremely rare states whose exact probability is
+still nonzero, its reported estimator uses the standard Jeffreys half-count,
 
 \[
 \widehat q_i=\frac{n_i+1/2}{N_{\rm sample}+K/2},\qquad
@@ -283,10 +285,12 @@ three validation temperatures. The maximum \(\log Z(T)\) error over a 16-point
 grid was 0.105%, demonstrating interpolation by the learned normalization
 network.
 
-For L=8, 200,000 fresh generated configurations at each temperature were
-compared with 256,000 independent Metropolis samples. All mean energy and |m|
-errors were below 0.45%; all susceptibility errors were below 4.35%. This clears
-the respective 3%, 3%, and 10% requirements without relaxing any criterion.
+For L=8, 200,000 fresh configurations from true sequential rollouts at each
+temperature were compared with 256,000 independent Metropolis samples. M4 also
+used true sequential rollouts for its L=4/L=8 observable curves. All mean energy
+and |m| errors were below 0.45%; all susceptibility errors were below 4.35%.
+This clears the respective 3%, 3%, and 10% requirements without relaxing any
+criterion.
 
 ## M4 — Predicting the critical temperature from the model
 
@@ -316,15 +320,17 @@ c(\beta)=\frac{\beta^2}{N}
 
 M4 evaluates \(\ln Z\) on 256 evenly spaced beta values, fits a degree-10
 Chebyshev polynomial, differentiates that smooth fit analytically, and searches
-for the maximum over T in [1.8, 2.8]. The exact L=4 oracle is the non-negotiable
-calibration: direct exact observables put its finite-size peak at T=2.438950,
-while the logZ pipeline returns T=2.439257, only 0.0126% away.
+for the maximum over T in [1.8, 2.8]. Direct exact L=4 observables put the
+finite-size peak at T=2.438950, while applying the pipeline to exact logZ returns
+T=2.439257, only 0.0126% away. This validates the differentiation pipeline on
+exact data, but it does not validate the learned logZ itself.
 
-Applying exactly the same procedure to the learned normalization networks gives
-T=2.281360 for L=4 and T=2.342234 for L=8. The larger-lattice value is the
-declared primary logZ prediction and is 3.22% above Onsager's thermodynamic-limit
-Tc=2.269185. Both are finite-size model predictions, so agreement to all digits
-is neither expected nor claimed.
+The learned L=4 peak is T=2.281360, which misses the exact-logZ peak by 6.5%.
+Using that known-truth miss as an empirical relative calibration error on the
+L=8 central peak gives Tc(logZ) = 2.34 +/- 0.15. The bar is not a statistical
+confidence interval: it records the learned function's demonstrated calibration
+error even though the differentiation procedure itself is accurate on exact
+input data.
 
 Differentiation is less forgiving than value prediction: tiny smooth errors in
 \(\ln Z\) are magnified by a second derivative. In particular, the learned
@@ -362,17 +368,23 @@ T_\times^{(4,8)}=2.242534,\qquad
 T_\times^{(8,12)}=2.249908.
 \]
 
-Their mean, 2.246221, is 1.01% below exact Tc. Giving the susceptibility family
-and the mean Binder family equal weight produces the declared observable-route
-consensus
+Their mean, 2.246221, is 1.01% below exact Tc. The susceptibility extrapolation
+is reported as 2.274 and the Binder mean as 2.246, giving an observable range of
+about 2.25 to 2.27. Their finite-size biases relative to exact Tc have opposite
+signs, so averaging them would hide the disagreement and overstate precision.
+
+As a methodological control, applying the same five-point quadratic peaks and
+linear \(1/L\) fit to the existing M1 Metropolis curves gives peak locations
+2.830413, 2.550983, and 2.446206 for L=4, 8, and 12, followed by
 
 \[
-T_c^{(\mathrm{obs})}=2.259873,
+T_c^{(\chi,\mathrm{M1\ MCMC})}=2.259472,\qquad R^2=0.99941.
 \]
 
-0.41% below exact. The weighting is a transparent summary convention, not a
-new estimator optimized after seeing the exact answer; the component estimates
-remain the scientifically useful outputs.
+No new samples were drawn. The M1 temperature grid is coarser near the first two
+maxima, and a three-point instead of five-point local fit shifts the intercept
+by roughly 0.008. The result is therefore a useful method control rather than a
+new precision claim.
 
 ### What trajectories reveal
 
@@ -403,16 +415,19 @@ presentation:
 1. **Validation facts:** exact L=4 KL, MCMC errors, and L=8 observable errors say
    whether the sampler is trustworthy at the sizes tested.
 2. **Finite-size estimates:** the learned-logZ peak, susceptibility intercept,
-   and Binder crossings are different estimators with different biases. The
-   observable consensus is a declared equal weighting, not a fitted law.
+   and Binder crossings are different estimators with different biases. Keep
+   the susceptibility and Binder estimates separate because their biases have
+   opposite signs.
 3. **Thermodynamic truth:** Onsager's Tc is the comparison target. It is never
    fed into training or used to adjust an acceptance threshold.
 
-The clean headline is: “The model predicted Tc=2.3422 from its learned partition
-function and Tc=2.2599 from generated observables, compared with exact 2.2692.”
-Immediately follow it with the important qualification that the logZ derivative
-has a nonphysical low-temperature boundary artifact and that only L=4/L=8
-GFlowNets were feasible on the CPU budget.
+The clean headline is: “After exact-oracle calibration, the learned partition
+function gives Tc(logZ) = 2.34 +/- 0.15. Generated observables give two separate
+estimates, susceptibility 2.274 and Binder 2.246, spanning about 2.25 to 2.27
+around exact Tc=2.2692.” Immediately explain that the differentiation pipeline
+was accurate on exact input, while the learned logZ carries the 6.5% calibration
+error. Also note the nonphysical low-temperature boundary artifact and that only
+L=4/L=8 GFlowNets were feasible on the CPU budget.
 
 When comparing samplers, avoid saying the GFlowNet replaces MCMC. Metropolis is
 simpler and reached L=12 without training. The GFlowNet's distinct advantages
@@ -424,7 +439,8 @@ both more accurate and more scientifically defensible.
 
 The paper is organized to make the evidence chain easy to defend orally:
 
-- The abstract states both Tc predictions and the exact comparison.
+- The abstract states the calibrated logZ result, both separate observable
+  estimates, and the exact comparison.
 - Methods establish the exact oracle, independent Metropolis baseline,
   trajectory-balance equation, temperature conditioning, and enforced symmetry.
 - Validation results come before the headline prediction, so the audience sees
@@ -440,3 +456,7 @@ The paper is organized to make the evidence chain easy to defend orally:
 If presentation time is short, use Figures 3 and 4: Figure 3 establishes model
 validation, and Figure 4 contains the two Tc routes. Figure 5 is explicitly
 exploratory and should not be promoted to a third critical-temperature method.
+
+The complete automated experiment and original report build occupied one session
+of roughly 90 minutes wall-clock. Milestone labels describe the workflow stages,
+not elapsed calendar time.

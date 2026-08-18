@@ -258,10 +258,13 @@ def add_body(story: list, styles: dict[str, ParagraphStyle]) -> None:
         "reserved for reference and is never supplied to training [4]."
     )
     p(
-        "The central contribution is two independent predictions. Curvature of the L=8 model's learned log partition "
-        "function gives T<sub>c</sub>=2.3422. Finite-size susceptibility and Binder statistics from generated samples "
-        "give an observable consensus T<sub>c</sub>=2.2599. Their disagreement is scientifically useful: it exposes the "
-        "different finite-size and numerical-derivative errors of the two routes."
+        "The central contribution is two independent routes. Calibrating the learned-log-Z route by its 6.5% L=4 "
+        "known-truth miss gives T<sub>c</sub>(log Z)=2.34 +/- 0.15. The observable route is kept as two estimates: "
+        "susceptibility extrapolation 2.274 and Binder mean 2.246, a range of about 2.25 to 2.27. Their finite-size "
+        "biases have opposite signs, so averaging them overstates precision."
+    )
+    p(
+        "The computation and original report build ran in one automated session of roughly 90 minutes wall-clock."
     )
 
     heading("2. Model and Methods")
@@ -331,17 +334,19 @@ def add_body(story: list, styles: dict[str, ParagraphStyle]) -> None:
     )
     story.append(Paragraph("<b>Table 1.</b> Exact-oracle validation. Source: M1 JSON.", styles["caption"]))
     p(
-        "At fixed temperature, two million empirical terminals per model give KL(exact||empirical)=0.014762 at T=3 and "
-        "0.015377 at T=2. Exact enumerated model KL values are 0.000511 and 0.002200. Learned log Z errors are 0.0055% "
-        "and 0.5473%, respectively (M2). The empirical KL uses a disclosed Jeffreys half-count so physically nonzero rare "
-        "states do not receive literal zero histogram probability."
+        "For M2, two million seeded multinomial draws from exactly enumerated model probabilities give "
+        "KL(exact||empirical)=0.014762 at T=3 and 0.015377 at T=2. For this normalized autoregressive model the draws "
+        "are distributionally equivalent to sequential rollout terminals, but they were not rollouts. Exact enumerated "
+        "model KL values are 0.000511 and 0.002200, and learned log Z errors are 0.0055% and 0.5473%. The histogram KL "
+        "uses a disclosed Jeffreys half-count so physically nonzero rare states do not receive zero probability."
     )
 
     subheading("3.2 One conditioned model")
     p(
         "The single conditioned L=4 model reaches exact KL 0.003255, 0.001690, and 0.000308 at T=1.8, 2.269185, and 3.0. "
-        "Its maximum log Z value error over a 16-point grid is 0.1053%. Table 2 compares 200,000 generated L=8 states "
-        "with 256,000 fresh Metropolis states at each temperature."
+        "Its maximum log Z value error over a 16-point grid is 0.1053%. Table 2 compares 200,000 L=8 states from true "
+        "sequential rollouts with 256,000 fresh Metropolis states at each temperature. M4 likewise used true sequential "
+        "rollouts for its generated-observable curves."
     )
     story.append(
         academic_table(
@@ -387,16 +392,17 @@ def add_body(story: list, styles: dict[str, ParagraphStyle]) -> None:
         "maximum."
     )
     p(
-        "The non-negotiable calibration succeeds: direct exact L=4 observables peak at T=2.438950, while the identical "
-        "exact-log-Z pipeline returns 2.439257, a 0.0126% location error. Learned log Z gives T=2.281360 at L=4 and "
-        "T=2.342234 at L=8. The larger-lattice primary prediction is"
+        "Direct exact L=4 observables peak at T=2.438950, while the exact-log-Z pipeline returns 2.439257, a 0.0126% "
+        "location error. This validates differentiation on exact data, but not the learned log Z itself. The learned "
+        "L=4 peak is 2.281360, a 6.5% known-truth miss. Applying that empirical relative calibration error to the raw "
+        "L=8 central peak gives"
     )
-    equation("T<sub>c</sub><super>(log Z)</super> = 2.3422 &nbsp;&nbsp; (+3.22% versus exact).")
+    equation("T<sub>c</sub><super>(log Z)</super> = 2.34 +/- 0.15.")
     p(
-        "The value lies in the predeclared finite-size window [2.1,2.5]. However, the learned differentiated curves become "
-        "negative near the T=1.5 boundary. A canonical Ising heat capacity cannot be negative: this is a curvature and "
-        "boundary artifact, not a physical discovery. The calibrated interior maximum is retained, and the failure is a "
-        "central limitation of learned-normalization derivatives."
+        "This is an empirical calibration bar, not a statistical confidence interval. The differentiation pipeline was "
+        "validated on exact data, but the learned log Z itself carries this calibration error. The central value is in "
+        "the predeclared [2.1,2.5] window. The differentiated learned curves also become negative near T=1.5; a canonical "
+        "Ising heat capacity cannot be negative, so this is nonphysical boundary curvature, not a physical discovery."
     )
 
     subheading("4.2 Generated-observable route")
@@ -407,13 +413,16 @@ def add_body(story: list, styles: dict[str, ParagraphStyle]) -> None:
     )
     equation("T<sub>c</sub><super>(chi)</super> = 2.273526, &nbsp;&nbsp; R<super>2</super> = 0.99825.")
     p(
-        "Linear Binder crossings are 2.242534 for L4/L8 and 2.249908 for L8/L12, with mean 2.246221. Giving the "
-        "susceptibility family and the mean Binder family equal weight defines the declared observable consensus"
+        "As a methodological control, the identical procedure on the existing M1 Metropolis-only L=4, 8, and 12 curves "
+        "gives peaks 2.830413, 2.550983, and 2.446206, followed by"
     )
-    equation("T<sub>c</sub><super>(obs)</super> = 2.2599 &nbsp;&nbsp; (-0.41% versus exact).")
+    equation("T<sub>c</sub><super>(chi, M1 MCMC)</super> = 2.259472, &nbsp;&nbsp; R<super>2</super> = 0.99941.")
     p(
-        "The equal weighting is an explicit summary convention rather than a tuned fit. The component estimates remain "
-        "visible: susceptibility is 0.19% high, the Binder mean is 1.01% low, and the exact value is 2.269185."
+        "No new sampling was performed. The coarser M1 grid makes this a method control rather than a precision result: "
+        "switching from a five-point to a three-point local fit shifts its intercept by about 0.008. Linear Binder "
+        "crossings are 2.242534 and 2.249908, with mean 2.246221. Thus the observable estimates are susceptibility 2.274 "
+        "and Binder 2.246, a range of about 2.25 to 2.27. The first is 0.19% high and the second 1.01% low; their biases "
+        "have opposite signs, so averaging them overstates precision. No observable consensus is reported."
     )
 
     subheading("4.3 Trajectory signatures")
@@ -456,7 +465,7 @@ def add_body(story: list, styles: dict[str, ParagraphStyle]) -> None:
     heading("5. Discussion")
     p(
         "The strongest evidence is the agreement of several independent objects: exact L=4 distributions, learned log Z "
-        "values, L=8 generated observables, L=12 Metropolis trends, and two finite-size critical estimators. The GFlowNet "
+        "values, L=8 generated observables, L=12 Metropolis trends, and separate finite-size critical estimators. The GFlowNet "
         "does more than match a mean. Its normalized autoregressive distribution covers both ordered signs and its learned "
         "normalization contains enough curvature to locate an interior heat-capacity peak."
     )
@@ -468,7 +477,8 @@ def add_body(story: list, styles: dict[str, ParagraphStyle]) -> None:
     )
     p(
         "Derivative sensitivity is the principal model limitation. Sub-percent errors in log Z values can become visible "
-        "curvature errors after two derivatives. A future model should parameterize log Z as a convex function of beta, "
+        "curvature errors after two derivatives, which is why the L=4 known-truth miss calibrates the L=8 result. A future "
+        "model should parameterize log Z as a convex function of beta, "
         "because its second derivative is Var(E) and must be nonnegative. Larger locality-aware policies and repeated-seed "
         "uncertainty estimates are natural follow-ups."
     )
@@ -482,11 +492,11 @@ def add_body(story: list, styles: dict[str, ParagraphStyle]) -> None:
     heading("6. Conclusion")
     p(
         "A compact CPU GFlowNet learned the periodic 2D Ising distribution to exact-oracle accuracy at L=4, generalized "
-        "across temperature, and reproduced L=8 Metropolis observables within the declared gates. It predicted critical "
-        "temperature as 2.3422 from learned partition-function curvature and 2.2599 from generated-observable consensus, "
-        "compared with exact 2.2692. The observable estimate is closer; the log-Z estimate is the more distinctively "
-        "model-based result and reveals the numerical fragility of thermodynamic derivatives. Small, verified lattices "
-        "support these claims; larger-system accuracy is left open."
+        "across temperature, and reproduced L=8 Metropolis observables within the declared gates. The calibrated learned "
+        "partition function gives T<sub>c</sub>=2.34 +/- 0.15. Generated observables give separate susceptibility and "
+        "Binder estimates of 2.274 and 2.246, spanning about 2.25 to 2.27 around exact 2.2692. Their opposite-sign biases "
+        "are not averaged into a falsely precise consensus. The log-Z route remains the distinctively model-based result "
+        "and reveals the numerical fragility of thermodynamic derivatives."
     )
 
     heading("Artifact Provenance")
@@ -502,7 +512,7 @@ def add_body(story: list, styles: dict[str, ParagraphStyle]) -> None:
                 ["M2", "Fixed-T GFN", "results/m2_metrics_20260818T012603-0400.json"],
                 ["M3", "Conditioned GFN", "results/m3_metrics_20260818T015650-0400.json"],
                 ["M4", "Criticality", "results/m4_metrics_20260818T021212-0400.json"],
-                ["M5", "Report audit", "results/m5_metrics_20260818T022241-0400.json"],
+                ["M5", "Report audit", "results/m5_metrics_20260818T030253-0400.json"],
             ],
             [0.28 * inch, 0.72 * inch, 1.37 * inch],
             font_size=5.5,
@@ -623,7 +633,7 @@ def build(output_path: Path) -> None:
         HRFlowable(width="100%", thickness=0.55, color=colors.HexColor("#66758c"), spaceBefore=1, spaceAfter=3),
         Paragraph("Abstract", styles["abstract_heading"]),
         Paragraph(
-            "A temperature-conditioned GFlowNet is trained to sample the periodic two-dimensional Ising model and to expose criticality through its learned normalization. Exact enumeration at L=4 and seeded Metropolis chains through L=12 gate every result. Fixed-temperature empirical KL is below 0.016 nats; a single conditioned model reaches L=4 exact KL below 0.0033 and L=8 observable errors below 4.35%. Curvature of learned L=8 log Z predicts T<sub>c</sub>=2.3422. Susceptibility extrapolation and Binder crossings yield an observable consensus T<sub>c</sub>=2.2599, compared with exact 2.2692. The study also identifies nonphysical boundary curvature in differentiated learned log Z, finite-size bias, and regimes where MCMC remains preferable.",
+            "A temperature-conditioned GFlowNet is trained to sample the periodic two-dimensional Ising model and expose criticality through its learned normalization. Exact L=4 enumeration and seeded Metropolis chains through L=12 gate every result. Fixed-temperature empirical KL is below 0.016 nats; a conditioned model reaches L=4 exact KL below 0.0033 and L=8 observable errors below 4.35%. Calibrating the learned-log-Z route by its 6.5% L=4 known-truth miss gives T<sub>c</sub>=2.34 +/- 0.15. Susceptibility extrapolation gives 2.274 and the Binder mean 2.246, an observable range of about 2.25 to 2.27 around exact 2.2692; their opposite-sign biases are not averaged. The study identifies nonphysical boundary curvature, finite-size bias, and regimes where MCMC remains preferable.",
             styles["abstract"],
         ),
         Spacer(1, 3),
