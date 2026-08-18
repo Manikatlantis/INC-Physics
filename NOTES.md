@@ -394,3 +394,28 @@ fraction of finite-lattice samples has exactly zero magnetization. Conditioning
 on nonzero magnetization removes that bookkeeping effect; at exact Tc the
 positive fraction is 0.50014. Thus the trajectories show no spontaneous
 preference for either ordered sign, consistent with the zero-field symmetry.
+
+## M5 — How to present the result honestly
+
+The report separates three kinds of statements that should not be blurred in a
+presentation:
+
+1. **Validation facts:** exact L=4 KL, MCMC errors, and L=8 observable errors say
+   whether the sampler is trustworthy at the sizes tested.
+2. **Finite-size estimates:** the learned-logZ peak, susceptibility intercept,
+   and Binder crossings are different estimators with different biases. The
+   observable consensus is a declared equal weighting, not a fitted law.
+3. **Thermodynamic truth:** Onsager's Tc is the comparison target. It is never
+   fed into training or used to adjust an acceptance threshold.
+
+The clean headline is: “The model predicted Tc=2.3422 from its learned partition
+function and Tc=2.2599 from generated observables, compared with exact 2.2692.”
+Immediately follow it with the important qualification that the logZ derivative
+has a nonphysical low-temperature boundary artifact and that only L=4/L=8
+GFlowNets were feasible on the CPU budget.
+
+When comparing samplers, avoid saying the GFlowNet replaces MCMC. Metropolis is
+simpler and reached L=12 without training. The GFlowNet's distinct advantages
+are amortized independent generation across T, explicit two-mode coverage, and
+access to a learned normalization function. That complementary comparison is
+both more accurate and more scientifically defensible.

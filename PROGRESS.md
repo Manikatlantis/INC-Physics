@@ -151,3 +151,50 @@ explicitly marks it **PASSED** and records the validator's measured criteria.
 - Next action: write M5 REPORT.md with every quantitative claim linked to its
   result artifact and with explicit limitations/finite-size discussion.
 - Budget: day 5 of 7; estimated 2 days remaining.
+
+## 2026-08-18 — M5 — PASSED
+
+- Done: completed `REPORT.md` with the problem, Ising/Boltzmann background,
+  trajectory-balance formulation, exact/MCMC methodology, milestone results,
+  both Tc routes, trajectory signatures, honest limitations, MCMC comparison,
+  follow-ups, reproducibility map, and only allowlisted references.
+- Metrics: 2,500 words; all 9 validator checks passed (required headings,
+  artifacts, measured result strings, local links, citations, placeholder
+  absence, limitations, and substantive length).
+- Artifacts: `REPORT.md` and
+  `results/m5_metrics_20260818T022204-0400.json`. The earlier parser-only failure
+  remains recorded at `results/m5_metrics_20260818T022112-0400.json`.
+- Status: **PASSED**.
+- Next action: convert the report to an academic paper-style PDF, validate every
+  included figure and quantitative claim, and record a clean M6 build.
+- Budget: day 6 of 7; estimated 1 day remaining.
+
+## 2026-08-18 — M5 validation attempt 1 — FAIL (traceability parser)
+
+- Done: drafted the full 2,500-word REPORT.md with required methods, results,
+  figures, two Tc routes, limitations, follow-ups, reproducibility map, and the
+  citation allowlist. The validator passed report existence, headings, artifact
+  links, key measured strings, local-link integrity, citations, placeholder
+  absence, and substantive length.
+- Metrics: 8 of 9 report checks passed. The sole failure was
+  `all_required_limitations`; artifact `results/m5_metrics_20260818T022112-0400.json`.
+- Diagnosis: (1) the report might have omitted the negative-heat-capacity
+  limitation; (2) the validator might have required a literal one-line phrase
+  even though Markdown wrapped it. Inspecting the report and emitted check map
+  confirmed hypothesis 2: REPORT.md contains “nonphysical” followed by
+  “negative differentiated heat capacity” across a newline. The cheapest fix is
+  whitespace-tolerant matching, without changing the required limitation.
+- Status: **FAIL** (validator parsing defect; report content was present).
+- Next action: make only that phrase check whitespace-tolerant and rerun every
+  unchanged M5 criterion.
+- Budget: day 5 of 7; estimated 2 days remaining.
+
+## 2026-08-18 — M5 log-order correction — PASSED reaffirmed
+
+- The M5 PASS entry was accidentally inserted above its attempt-1 FAIL entry by
+  an ambiguous append anchor. No prior text has been moved or rewritten; this
+  appended correction records the actual chronology: attempt 1 failed the
+  whitespace-sensitive parser, the parser was fixed, and all criteria passed.
+- The latest unchanged rerun also passed all 9 checks and is recorded at
+  `results/m5_metrics_20260818T022241-0400.json`.
+- Status: M5 remains **PASSED**; proceed to M6.

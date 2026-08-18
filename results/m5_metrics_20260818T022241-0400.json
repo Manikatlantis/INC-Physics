@@ -1,0 +1,80 @@
+{
+  "checks": {
+    "all_key_result_strings_present": true,
+    "all_required_artifacts_linked_and_exist": true,
+    "all_required_headings": true,
+    "all_required_limitations": true,
+    "citations_within_allowlist": true,
+    "no_broken_local_links": true,
+    "no_placeholders": true,
+    "report_exists": true,
+    "substantive_length": true
+  },
+  "details": {
+    "artifacts": {
+      "results/m1_metrics_20260818T002648-0400.json": true,
+      "results/m1_observables_20260818T002648-0400.png": true,
+      "results/m2_fixed_temperature_20260818T012603-0400.png": true,
+      "results/m2_metrics_20260818T012603-0400.json": true,
+      "results/m3_conditioned_summary_20260818T015650-0400.png": true,
+      "results/m3_metrics_20260818T015650-0400.json": true,
+      "results/m4_metrics_20260818T021212-0400.json": true,
+      "results/m4_tc_summary_20260818T021212-0400.png": true,
+      "results/m4_trajectory_signatures_20260818T021212-0400.png": true
+    },
+    "broken_local_links": [],
+    "cited_arxiv_ids": [
+      "2111.09266",
+      "2201.13259",
+      "2202.01361"
+    ],
+    "disallowed_arxiv_ids": [],
+    "headings": {
+      "## 1. Problem statement": true,
+      "## 2. Ising and Boltzmann background": true,
+      "## 3. GFlowNet formulation": true,
+      "## 4. Validation methodology": true,
+      "## 5. Results": true,
+      "## 6. Discussion and limitations": true,
+      "## 7. Follow-up work": true,
+      "## 8. Reproducibility map": true,
+      "## 9. Conclusion": true,
+      "## Abstract": true,
+      "## References": true
+    },
+    "key_result_strings": {
+      "0.003255": true,
+      "0.0126%": true,
+      "0.014762": true,
+      "0.015377": true,
+      "0.498825": true,
+      "2.246221": true,
+      "2.2599": true,
+      "2.273526": true,
+      "2.342234": true
+    },
+    "limitations": {
+      "cpu_bound": true,
+      "finite_size": true,
+      "mcmc_advantage": true,
+      "mode_coverage": true,
+      "negative_heat_capacity_artifact": true
+    },
+    "placeholder_matches": []
+  },
+  "duration_seconds": 0.001666,
+  "finished_at": "2026-08-18T02:22:41.679600-04:00",
+  "git": {
+    "commit": "208e1a97a59c75ae2fe7fc56a13b3d099b8ce7a7",
+    "dirty": true
+  },
+  "milestone": "M5",
+  "python": "3.13.7 (v3.13.7:bcee1c32211, Aug 14 2025, 19:10:51) [Clang 16.0.0 (clang-1600.0.26.6)]",
+  "report": {
+    "path": "REPORT.md",
+    "sha256": "e368152dc4712b2a0fc377a7ad7efa91ba0c59dff4809a1fc6c7f94badef6555",
+    "word_count": 2500
+  },
+  "started_at": "2026-08-18T02:22:41.677934-04:00",
+  "status": "PASS"
+}
